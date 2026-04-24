@@ -10,513 +10,215 @@
 <title>인생 이즈 굿 | In-saeng is Good</title>
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 <style>
-:root{--g:#5B8C5A;--gl:#E8F0E8;--gd:#3D6B3C;--teal:#4ECDC4;--coral:#FF6B6B;--blue:#45B7D1;--gold:#F7DC6F;--bg:#F4F7F2;--card:#fff;--tx:#2D3A2D;--txl:#8CA88C;--sh:0 2px 12px rgba(45,58,45,.06)}
+:root{--g:#5B8C5A;--gl:#E8F0E8;--gd:#3D6B3C;--teal:#4ECDC4;--coral:#FF6B6B;--blue:#45B7D1;--gold:#F7DC6F;--bg:#F4F7F2;--tx:#2D3A2D;--txl:#8CA88C;--sh:0 2px 12px rgba(45,58,45,.06)}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{font-family:Pretendard,-apple-system,sans-serif;background:var(--bg);color:var(--tx);max-width:480px;margin:0 auto;min-height:100vh;overflow-x:hidden;padding-bottom:80px}
-.hd{padding:18px 16px 12px;text-align:center;background:linear-gradient(135deg,#5B8C5A 0%,#3a7d5c 50%,#4ECDC4 100%);color:#fff;position:sticky;top:0;z-index:100}
-.hd h1{font-size:17px;font-weight:800;letter-spacing:-.3px}
+.hd{padding:16px 16px 10px;text-align:center;background:linear-gradient(135deg,#5B8C5A 0%,#3a7d5c 50%,#4ECDC4 100%);color:#fff;position:sticky;top:0;z-index:100}
+.hd h1{font-size:17px;font-weight:800}
 .hd .sub{font-size:10px;opacity:.85;margin-top:1px}
-.hd .en{font-size:9px;opacity:.6;margin-top:1px;font-style:italic}
-.tb{display:flex;gap:2px;padding:4px;background:#fff;position:sticky;top:56px;z-index:99;box-shadow:var(--sh)}
-.t{flex:1;text-align:center;padding:7px 2px;border:none;background:0;font-size:9px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--txl);border-radius:8px;transition:.2s}
+.hd .en{font-size:9px;opacity:.6;font-style:italic}
+.tb{display:flex;gap:1px;padding:3px;background:#fff;position:sticky;top:52px;z-index:99;box-shadow:var(--sh);overflow-x:auto}
+.t{flex:none;width:calc(100%/7);text-align:center;padding:6px 2px;border:none;background:0;font-size:8px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--txl);border-radius:7px;transition:.2s;white-space:nowrap}
 .t.a{background:var(--g);color:#fff}
-.t i{font-size:15px;display:block;margin-bottom:1px}
+.t i{font-size:14px;display:block;margin-bottom:1px}
 .ct{padding:10px 12px}
-.c{background:var(--card);border-radius:14px;padding:14px;margin-bottom:10px;box-shadow:var(--sh)}
-.c h3{font-size:14px;font-weight:700;margin-bottom:10px}
+.c{background:#fff;border-radius:14px;padding:13px;margin-bottom:10px;box-shadow:var(--sh)}
+.c h3{font-size:13px;font-weight:700;margin-bottom:9px}
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px}
-.cb{border:none;border-radius:12px;padding:11px 9px;text-align:left;cursor:pointer;font-family:inherit;transition:.2s;box-shadow:0 1px 6px rgba(0,0,0,.04)}
-.cb i{font-size:20px;display:block;margin-bottom:3px}
-.cb .l{font-size:11px;font-weight:700}
-.cb .d{font-size:8px;opacity:.8;margin-top:1px}
-.ri{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid #f0f4f0;cursor:pointer}
+.cb{border:none;border-radius:11px;padding:10px 8px;text-align:left;cursor:pointer;font-family:inherit;transition:.2s;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.cb i{font-size:18px;display:block;margin-bottom:2px}
+.cb .l{font-size:10px;font-weight:700}
+.cb .d{font-size:8px;opacity:.8}
+.ri{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f0f4f0;cursor:pointer}
 .ri:last-child{border:none}
-.rn{font-size:13px;font-weight:600}
-.rm{font-size:10px;color:var(--txl);margin-top:2px}
-.btn{border:none;border-radius:12px;padding:12px;width:100%;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:.2s}
+.btn{border:none;border-radius:11px;padding:11px;width:100%;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:.2s}
 .btn:active{transform:scale(.97)}
 .bp{background:var(--g);color:#fff}
 .bo{background:0;border:2px solid var(--g);color:var(--g)}
-.cr{display:flex;align-items:center;gap:9px;padding:7px 0;cursor:pointer;user-select:none}
-.cc{width:21px;height:21px;border-radius:50%;border:2px solid #C8D6C8;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.2s;font-size:10px;color:transparent}
+.cr{display:flex;align-items:center;gap:8px;padding:6px 0;cursor:pointer;user-select:none}
+.cc{width:20px;height:20px;border-radius:50%;border:2px solid #C8D6C8;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.2s;font-size:10px;color:transparent}
 .cc.on{background:var(--g);border-color:var(--g);color:#fff}
-.pg{width:100%;height:8px;background:#E8EDE8;border-radius:4px;overflow:hidden}
+.pg{width:100%;height:7px;background:#E8EDE8;border-radius:4px;overflow:hidden}
 .pf{height:100%;border-radius:4px;transition:width .5s}
-.wr{display:flex;gap:5px;flex-wrap:wrap}
-.wb{width:36px;height:36px;border-radius:50%;border:2px solid var(--blue);background:0;font-size:13px;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
+.wr{display:flex;gap:4px;flex-wrap:wrap}
+.wb{width:34px;height:34px;border-radius:50%;border:2px solid var(--blue);background:0;font-size:12px;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
 .wb.on{background:var(--blue);border-color:var(--blue)}
-.ai{display:flex;align-items:center;gap:10px;padding:10px;background:#FFF5F5;border-radius:10px;margin-bottom:6px;border-left:3px solid var(--coral)}
-.gi{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid #f0f4f0}
+.ai{display:flex;align-items:center;gap:9px;padding:9px;background:#FFF5F5;border-radius:9px;margin-bottom:5px;border-left:3px solid var(--coral)}
+.gi{display:flex;align-items:center;gap:9px;padding:6px 0;border-bottom:1px solid #f0f4f0}
 .gi:last-child{border:none}
-textarea,input[type=text],input[type=number]{width:100%;border:1.5px solid #dde5dd;border-radius:10px;padding:10px;font-family:inherit;font-size:13px;outline:none;transition:.2s}
-textarea{resize:vertical;min-height:90px}
+textarea,input[type=text],input[type=number],input[type=date]{width:100%;border:1.5px solid #dde5dd;border-radius:9px;padding:9px;font-family:inherit;font-size:12px;outline:none;transition:.2s}
+textarea{resize:vertical;min-height:80px}
 textarea:focus,input:focus{border-color:var(--g)}
-.sg{display:grid;grid-template-columns:1fr 1fr;gap:5px}
-.sb{border:2px solid #dde5dd;border-radius:10px;padding:9px 7px;text-align:center;cursor:pointer;font-family:inherit;font-size:11px;font-weight:600;background:#fff;transition:.2s}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.sb{border:2px solid #dde5dd;border-radius:9px;padding:8px 6px;text-align:center;cursor:pointer;font-family:inherit;font-size:10px;font-weight:600;background:#fff;transition:.2s}
 .sb.on{border-color:var(--coral);background:#FFF0F0;color:var(--coral)}
-.wc{display:flex;align-items:flex-end;gap:3px;height:100px;padding:8px 0}
-.wbar{flex:1;background:linear-gradient(0deg,var(--g),var(--teal));border-radius:3px 3px 0 0;min-height:3px}
-.wl{font-size:7px;color:var(--txl);text-align:center;margin-top:1px}
-.tip{background:#F0F7F0;border-radius:12px;padding:13px;border:1px solid #D4E8D4;margin-bottom:10px}
+.tip{background:#F0F7F0;border-radius:11px;padding:12px;border:1px solid #D4E8D4;margin-bottom:9px}
 .tip.w{background:#FFF8E1;border-color:#F7DC6F}
 .tip.r{background:#FFF5F5;border-color:#FFB3B3}
-.bk{background:0;border:none;font-size:13px;color:var(--g);font-weight:600;cursor:pointer;font-family:inherit;margin-bottom:8px;padding:3px 0}
-.dh{text-align:center;padding:14px 0}
-.dh i{font-size:44px}
-.dh h2{font-size:17px;font-weight:800;margin-top:5px}
-.sn{width:22px;height:22px;border-radius:50%;background:var(--g);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.fd{animation:fi .3s ease}
-@keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
-.dp{display:inline-block;padding:6px 11px;border-radius:18px;font-size:10px;font-weight:600;cursor:pointer;border:none;font-family:inherit;margin:0 2px 5px 0;transition:.2s}
-.ml{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #f0f4f0}
+.bk{background:0;border:none;font-size:12px;color:var(--g);font-weight:600;cursor:pointer;font-family:inherit;margin-bottom:7px}
+.sn{width:20px;height:20px;border-radius:50%;background:var(--g);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fd{animation:fi .25s ease}
+@keyframes fi{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.dp{display:inline-block;padding:5px 10px;border-radius:16px;font-size:10px;font-weight:600;cursor:pointer;border:none;font-family:inherit;margin:0 2px 4px 0;transition:.2s}
+.ml{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f0f4f0;align-items:center}
 .ml:last-child{border:none}
-.es{text-align:center;padding:20px 0;color:var(--txl)}
-.es i{font-size:28px;display:block;margin-bottom:5px}
-.badge{display:inline-block;padding:2px 7px;border-radius:8px;font-size:9px;font-weight:600;margin:1px 2px}
-.qa-item{padding:12px 0;border-bottom:1px solid #f0f4f0}
-.qa-item:last-child{border:none}
-.qa-q{font-size:13px;font-weight:700;color:var(--g);margin-bottom:5px;cursor:pointer}
-.qa-a{font-size:12px;line-height:1.7;color:#4A6B4A}
-.section-title{font-size:15px;font-weight:800;margin:16px 0 8px;color:var(--gd);display:flex;align-items:center;gap:6px}
-.guide-block{background:#fff;border-radius:12px;padding:14px;margin-bottom:10px;box-shadow:var(--sh)}
-.guide-block h4{font-size:13px;font-weight:700;margin-bottom:8px;color:var(--tx)}
-.guide-block li{font-size:12px;line-height:1.7;margin-bottom:3px;list-style:none;padding-left:14px;position:relative}
-.guide-block li::before{content:'•';position:absolute;left:0;color:var(--g)}
-.manual-row{display:flex;gap:6px;margin-bottom:8px}
+.es{text-align:center;padding:18px 0;color:var(--txl)}
+.es i{font-size:26px;display:block;margin-bottom:4px}
+.badge{display:inline-block;padding:2px 6px;border-radius:7px;font-size:8px;font-weight:600;margin:1px 2px}
+.manual-row{display:flex;gap:5px;margin-bottom:7px}
 .manual-row input{flex:1}
-.manual-row input.sm{max-width:70px}
+.manual-row input.sm{max-width:65px}
+.edit-btn{border:none;background:#E8F0E8;border-radius:5px;padding:3px 7px;font-size:9px;cursor:pointer;font-family:inherit;color:var(--g)}
+.del-btn{border:none;background:#FFF0F0;border-radius:5px;padding:3px 7px;font-size:9px;cursor:pointer;font-family:inherit;color:var(--coral)}
+.cal-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.cal-nav button{border:none;background:var(--gl);border-radius:8px;padding:6px 12px;font-size:13px;cursor:pointer;font-family:inherit;color:var(--g);font-weight:700}
+.cal-nav span{font-size:14px;font-weight:700}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
+.cal-hd{font-size:9px;font-weight:600;color:var(--txl);padding:4px 0}
+.cal-day{font-size:11px;padding:6px 2px;border-radius:8px;cursor:pointer;transition:.2s;min-height:36px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+.cal-day:hover{background:var(--gl)}
+.cal-day.today{background:var(--g);color:#fff;font-weight:700}
+.cal-day.has-data{font-weight:700}
+.cal-day.has-data::after{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);position:absolute;bottom:3px}
+.cal-day.today.has-data::after{background:#fff}
+.cal-day.sel{outline:2px solid var(--g);outline-offset:-2px}
+.cal-day.empty{cursor:default}
+.cal-day.sun{color:var(--coral)}
+.cal-day.sat{color:var(--blue)}
+.chemo-badge{display:inline-block;background:linear-gradient(135deg,var(--g),var(--teal));color:#fff;border-radius:10px;padding:4px 12px;font-size:12px;font-weight:700;margin-bottom:8px}
+.vital-row{display:flex;gap:5px;margin-bottom:6px;align-items:center}
+.vital-row label{font-size:11px;font-weight:600;min-width:40px;flex-shrink:0}
+.vital-row input{flex:1;padding:7px;font-size:12px}
+.record-card{background:#FAFCFA;border-radius:10px;padding:10px;margin-bottom:8px;border:1px solid #E8EDE8}
+.guide-block{background:#fff;border-radius:11px;padding:13px;margin-bottom:9px;box-shadow:var(--sh)}
+.guide-block h4{font-size:12px;font-weight:700;margin-bottom:7px}
+.guide-block li{font-size:11px;line-height:1.7;margin-bottom:2px;list-style:none;padding-left:13px;position:relative}
+.guide-block li::before{content:'•';position:absolute;left:0;color:var(--g)}
+.qa-item{padding:10px 0;border-bottom:1px solid #f0f4f0}
+.qa-item:last-child{border:none}
+.qa-q{font-size:12px;font-weight:700;color:var(--g);margin-bottom:4px}
+.qa-a{font-size:11px;line-height:1.7;color:#4A6B4A}
+.section-title{font-size:14px;font-weight:800;margin:14px 0 7px;color:var(--gd)}
 </style>
 </head>
 <body>
 <div class="hd">
-<div style="font-size:26px;margin-bottom:1px">🌿</div>
+<div style="font-size:24px">🌿</div>
 <h1>인생 이즈 굿</h1>
 <div class="sub">아버님을 위한 항암 영양케어 프로그램</div>
 <div class="en">In-saeng is Good</div>
 </div>
 <div class="tb" id="tabBar"></div>
 <div class="ct" id="app"></div>
-
 <script>
-const TABS=[
-{id:'recipes',label:'맞춤 레시피',icon:'🍽️'},
-{id:'daily',label:'일별 가이드',icon:'📅'},
-{id:'tracker',label:'오늘 기록',icon:'📊'},
-{id:'health',label:'건강 일기',icon:'📝'},
-{id:'guide',label:'치료 가이드',icon:'💊'},
-{id:'avoid',label:'주의 식품',icon:'⚠️'}
-];
-
-const CATS=[
-{id:'nausea',label:'구역감 완화',emoji:'🤢',color:'#4ECDC4',desc:'항암 후 메스꺼울 때'},
-{id:'esoph',label:'식도염 케어',emoji:'🩹',color:'#FF6B6B',desc:'삼키기 힘들 때'},
-{id:'immun',label:'면역력 회복',emoji:'💪',color:'#45B7D1',desc:'백혈구 회복기'},
-{id:'energy',label:'열량 보충',emoji:'⚡',color:'#F7DC6F',desc:'체중·체력 유지'},
-{id:'digest',label:'소화 편한 식사',emoji:'🫗',color:'#A8D8EA',desc:'속이 불편할 때'},
-{id:'blood',label:'빈혈 예방',emoji:'🩸',color:'#E8A0BF',desc:'철분·엽산 보충'},
-{id:'snack',label:'간식·음료',emoji:'🧃',color:'#B5EAD7',desc:'식간 영양 보충'},
-{id:'soup',label:'국·탕·찌개',emoji:'🍲',color:'#FFB347',desc:'따뜻한 한 그릇'}
-];
-
+const TABS=[{id:'calendar',label:'캘린더',icon:'📅'},{id:'recipes',label:'레시피',icon:'🍽️'},{id:'daily',label:'가이드',icon:'📋'},{id:'tracker',label:'식사기록',icon:'📊'},{id:'health',label:'건강일기',icon:'📝'},{id:'guide',label:'치료팁',icon:'💊'},{id:'share',label:'공유',icon:'🔗'}];
+const CATS=[{id:'nausea',label:'구역감 완화',emoji:'🤢',color:'#4ECDC4',desc:'항암 후 메스꺼울 때'},{id:'esoph',label:'식도염 케어',emoji:'🩹',color:'#FF6B6B',desc:'삼키기 힘들 때'},{id:'immun',label:'면역력 회복',emoji:'💪',color:'#45B7D1',desc:'백혈구 회복기'},{id:'energy',label:'열량 보충',emoji:'⚡',color:'#F7DC6F',desc:'체중·체력 유지'},{id:'digest',label:'소화 편한',emoji:'🫗',color:'#A8D8EA',desc:'속이 불편할 때'},{id:'blood',label:'빈혈 예방',emoji:'🩸',color:'#E8A0BF',desc:'철분·엽산 보충'},{id:'snack',label:'간식·음료',emoji:'🧃',color:'#B5EAD7',desc:'식간 영양 보충'},{id:'soup',label:'국·탕·찌개',emoji:'🍲',color:'#FFB347',desc:'따뜻한 한 그릇'}];
 const R={
-nausea:[
-{name:'생강 미음',emoji:'🍚',time:'20분',cal:180,pro:3,desc:'구역감을 줄여주는 생강과 부드러운 쌀미음',ing:['쌀 1/2컵','생강 1쪽','물 4컵','소금 약간','꿀 1큰술(선택)'],steps:['쌀을 30분 불린 후 물과 함께 끓인다','생강 슬라이스를 넣고 약불에서 20분 끓인다','체에 걸러 미음만 받는다','소금으로 간하고 꿀 추가'],tip:'항암 투여 당일~2일차에 특히 도움됩니다.'},
-{name:'바나나 두부 스무디',emoji:'🍌',time:'5분',cal:250,pro:12,desc:'부드럽고 단백질 풍부한 영양 스무디',ing:['바나나 1개','연두부 1/2모','우유 200ml','꿀 1큰술','얼음'],steps:['모든 재료를 블렌더에 넣는다','부드럽게 갈아준다','차갑게 서빙한다'],tip:'입맛 없을 때 식사 대용으로 좋습니다.'},
-{name:'감자 수프',emoji:'🥔',time:'30분',cal:220,pro:6,desc:'속이 편안한 담백한 감자 수프',ing:['감자 2개','양파 1/4개','우유 200ml','버터 1큰술','소금·후추'],steps:['감자와 양파를 잘게 썰어 버터에 볶는다','물 2컵 넣고 감자가 무를 때까지 끓인다','블렌더로 곱게 갈아준다','우유 넣고 약불에서 데운 후 간한다'],tip:'향이 강하지 않아 구역감이 있을 때도 수월합니다.'},
-{name:'매실 레몬 에이드',emoji:'🍋',time:'3분',cal:60,pro:0,desc:'상큼하게 구역감을 잡아주는 음료',ing:['매실청 2큰술','레몬즙 1큰술','탄산수 또는 물 300ml','얼음'],steps:['잔에 매실청과 레몬즙을 넣는다','탄산수를 부어 섞는다','얼음을 넣어 차갑게 마신다'],tip:'항암 후 입안이 텁텁할 때 입맛을 돋워줍니다.'},
-{name:'크래커 & 치즈',emoji:'🧀',time:'3분',cal:200,pro:8,desc:'마른 음식으로 구역감 완화',ing:['크래커 8장','크림치즈 2큰술','오이 슬라이스'],steps:['크래커에 크림치즈를 바른다','오이 슬라이스를 올린다','소량씩 천천히 먹는다'],tip:'아침 기상 시 빈속에 먹으면 구역감 예방에 좋습니다.'}
-],
-esoph:[
-{name:'달걀 찜',emoji:'🥚',time:'15분',cal:160,pro:14,desc:'부드럽고 삼키기 쉬운 고단백 달걀찜',ing:['달걀 3개','멸치육수 180ml','소금 약간','참기름 약간'],steps:['달걀을 잘 풀어 육수와 섞는다','체에 한번 걸러 부드럽게 만든다','뚜껑 덮고 중약불에서 10분 찐다','참기름을 살짝 뿌린다'],tip:'방사선 치료로 식도가 아플 때 가장 추천합니다.'},
-{name:'호박 죽',emoji:'🎃',time:'40분',cal:200,pro:4,desc:'달콤하고 부드러운 단호박 죽',ing:['단호박 1/4개','찹쌀가루 3큰술','물 3컵','소금 약간'],steps:['단호박을 찐 후 껍질을 벗긴다','물과 함께 블렌더에 곱게 간다','찹쌀가루를 풀어 넣는다','걸쭉해질 때까지 저으며 끓인다'],tip:'삼키기 편하고 열량 보충에 좋습니다.'},
-{name:'연두부 소스 우동',emoji:'🍜',time:'15분',cal:320,pro:15,desc:'부드러운 연두부 소스로 목넘김이 편한 우동',ing:['우동면 1인분','연두부 1모','참깨 1큰술','간장 1큰술','참기름'],steps:['우동면을 푹 삶아 부드럽게 만든다','연두부, 참깨, 간장을 블렌더에 간다','면에 소스를 끼얹는다','참기름을 뿌린다'],tip:'면을 평소보다 오래 삶으면 삼키기 더 수월합니다.'},
-{name:'으깬 감자 & 그레이비',emoji:'🥔',time:'25분',cal:280,pro:8,desc:'크리미하게 으깬 감자에 부드러운 소스',ing:['감자 2개','우유 100ml','버터 2큰술','소금·후추','치킨스톡 1컵'],steps:['감자를 삶아 으깬다','버터와 우유를 넣고 부드럽게 섞는다','치킨스톡을 데워 소스로 끼얹는다','소금으로 간한다'],tip:'목이 아플 때 주식으로 든든합니다.'},
-{name:'바나나 오트밀 포리지',emoji:'🥣',time:'10분',cal:260,pro:8,desc:'부드럽게 익힌 오트밀에 바나나를 곁들인 식사',ing:['오트밀 1/2컵','우유 250ml','바나나 1개','꿀 1큰술','시나몬 약간'],steps:['우유에 오트밀을 넣고 끓인다','약불에서 5분간 저으며 익힌다','바나나를 으깨 넣는다','꿀과 시나몬으로 마무리'],tip:'아침 식사로 좋고, 식도 자극이 적습니다.'}
-],
-immun:[
-{name:'소고기 뭇국',emoji:'🥩',time:'40분',cal:280,pro:22,desc:'고단백 보양식, 면역력 회복',ing:['소고기(국거리) 150g','무 1/4개','대파 1대','국간장 1큰술','다진마늘','참기름'],steps:['소고기를 참기름에 볶는다','무를 넣고 함께 볶다가 물 5컵을 넣는다','끓으면 약불로 30분 끓인다','국간장과 마늘로 간한다'],tip:'백혈구 회복기에 단백질 보충용으로 좋습니다.'},
-{name:'닭가슴살 채소 리조또',emoji:'🍗',time:'35분',cal:380,pro:28,desc:'고단백·고열량 한 그릇 영양식',ing:['닭가슴살 1쪽','밥 1공기','양파 1/4개','버섯','우유 100ml','치즈 1장','올리브오일'],steps:['닭가슴살을 삶아 잘게 찢는다','양파와 버섯을 볶는다','밥과 닭가슴살을 넣고 우유를 부어 끓인다','치즈를 넣고 녹인다'],tip:'한 그릇으로 탄·단·지를 고루 섭취합니다.'},
-{name:'시금치 된장국',emoji:'🥬',time:'20분',cal:120,pro:8,desc:'철분과 엽산이 풍부한 회복식',ing:['시금치 한 줌','두부 1/4모','된장 1.5큰술','멸치육수 3컵','대파'],steps:['멸치육수를 끓인다','된장을 풀어 넣는다','두부를 깍둑 썰어 넣는다','시금치를 넣고 한소끔 끓인다'],tip:'빈혈 예방에 좋고 소화가 잘 됩니다.'},
-{name:'연어 구이 덮밥',emoji:'🐟',time:'15분',cal:420,pro:30,desc:'오메가3와 단백질이 풍부한 영양 덮밥',ing:['연어 100g','아보카도 1/2개','밥 1공기','간장 1큰술','참기름'],steps:['연어를 구워 한입 크기로 자른다','아보카도를 슬라이스한다','밥 위에 올린다','간장·참기름 소스를 뿌린다'],tip:'면역 최저기에는 반드시 완전히 익힌 연어를 사용하세요.'},
-{name:'삼계탕 간편식',emoji:'🐔',time:'50분',cal:450,pro:35,desc:'한방 보양식으로 기력 회복',ing:['닭 반 마리','찹쌀 1/3컵','대추 3개','마늘 5쪽','황기 1뿌리','소금'],steps:['닭 뱃속에 찹쌀, 대추, 마늘을 넣는다','물을 부어 끓인다','약불에서 40분 푹 끓인다','소금으로 간한다'],tip:'기력이 많이 떨어졌을 때 최고의 보양식입니다.'}
-],
-energy:[
-{name:'검은깨 미숫가루 셰이크',emoji:'🥛',time:'3분',cal:350,pro:10,desc:'간편 고열량 음료',ing:['미숫가루 4큰술','검은깨 1큰술','우유 250ml','꿀 1큰술','바나나 1/2개'],steps:['모든 재료를 블렌더에 넣는다','부드럽게 갈아준다','바로 마신다'],tip:'식사가 힘든 날 간식으로 수시로 드세요.'},
-{name:'아보카도 참치 덮밥',emoji:'🥑',time:'10분',cal:450,pro:25,desc:'건강한 지방과 단백질이 풍부',ing:['밥 1공기','아보카도 1/2개','참치캔 1개','간장 1큰술','참기름'],steps:['아보카도를 슬라이스한다','참치를 간장, 참기름으로 양념한다','밥 위에 올린다'],tip:'아보카도의 건강한 지방이 체중 유지에 도움됩니다.'},
-{name:'고구마 치즈 구이',emoji:'🍠',time:'25분',cal:320,pro:10,desc:'달콤하고 든든한 고열량 간식',ing:['고구마 1개','모짜렐라 치즈 50g','버터 1큰술','꿀'],steps:['고구마를 삶거나 전자레인지로 익힌다','반으로 갈라 버터를 바른다','치즈 올리고 녹인다','꿀을 뿌린다'],tip:'간식으로 열량을 자연스럽게 늘릴 수 있어요.'},
-{name:'견과류 에너지 볼',emoji:'🥜',time:'15분',cal:280,pro:9,desc:'한입에 쏙! 고열량 간식볼',ing:['오트밀 1컵','땅콩버터 3큰술','꿀 2큰술','초코칩 2큰술','건포도 1큰술'],steps:['모든 재료를 잘 섞는다','한입 크기로 동그랗게 빚는다','냉장고에서 30분 굳힌다'],tip:'한 번에 여러 개 만들어두면 일주일 간식으로 편리합니다.'},
-{name:'크림 파스타',emoji:'🍝',time:'20분',cal:520,pro:18,desc:'고열량 크림 소스 파스타',ing:['파스타면 100g','베이컨 3줄','생크림 150ml','파마산 치즈','마늘 2쪽'],steps:['파스타를 삶는다','베이컨과 마늘을 볶는다','생크림을 넣고 끓인다','파스타를 넣고 치즈를 뿌린다'],tip:'열량이 높아 체중 유지가 필요할 때 좋습니다.'}
-],
-digest:[
-{name:'무 나박김치 국수',emoji:'🍜',time:'15분',cal:250,pro:7,desc:'시원하고 소화가 잘 되는 냉국수',ing:['소면 1인분','나박김치 국물 2컵','오이 1/4개','삶은 달걀 1/2개'],steps:['소면을 삶아 찬물에 헹군다','나박김치 국물을 부는다','오이와 달걀을 올린다'],tip:'속이 더부룩할 때 가볍게 먹기 좋습니다.'},
-{name:'잣죽',emoji:'🌰',time:'30분',cal:240,pro:6,desc:'고소하고 부드러운 영양죽',ing:['쌀 1/2컵','잣 3큰술','물 4컵','소금 약간'],steps:['쌀을 불린다','잣과 쌀을 블렌더에 간다','냄비에 넣고 저으며 끓인다','소금으로 간한다'],tip:'소화 부담이 거의 없어 속이 많이 안 좋을 때 추천합니다.'},
-{name:'양배추 달걀 수프',emoji:'🥗',time:'15분',cal:150,pro:10,desc:'위장을 보호하는 양배추 수프',ing:['양배추 2장','달걀 1개','멸치육수 2컵','소금·후추'],steps:['양배추를 잘게 썬다','육수에 양배추를 넣고 끓인다','달걀을 풀어 넣는다','소금으로 간한다'],tip:'양배추의 비타민U가 위장 보호에 도움됩니다.'},
-{name:'두부 채소 수프',emoji:'🫕',time:'20분',cal:180,pro:14,desc:'부드럽고 소화 잘 되는 두부 수프',ing:['두부 1/2모','감자 1개','당근 1/4개','양파 1/4개','소금'],steps:['채소를 잘게 썰어 끓인다','두부를 으깨 넣는다','블렌더로 곱게 간다','소금으로 간한다'],tip:'배가 편하면서도 단백질 섭취가 됩니다.'}
-],
-blood:[
-{name:'소고기 미역국',emoji:'🥬',time:'40분',cal:200,pro:18,desc:'철분이 풍부한 전통 보양식',ing:['소고기(국거리) 100g','마른미역 15g','참기름 1큰술','국간장 1큰술'],steps:['미역을 불려 먹기 좋게 자른다','소고기를 참기름에 볶는다','미역을 넣고 함께 볶는다','물 넣고 30분 끓인 후 간한다'],tip:'철분과 요오드가 풍부하여 빈혈 예방에 탁월합니다.'},
-{name:'시금치 달걀 볶음밥',emoji:'🍳',time:'15분',cal:350,pro:16,desc:'철분+단백질 한 그릇 식사',ing:['밥 1공기','시금치 한 줌','달걀 2개','참기름','간장 1큰술'],steps:['시금치를 데쳐 잘게 썬다','달걀을 풀어 스크램블한다','밥을 넣고 볶는다','간장과 참기름으로 간한다'],tip:'빈혈이 있을 때 간편하게 철분을 보충합니다.'},
-{name:'비트 사과 주스',emoji:'🧃',time:'5분',cal:120,pro:2,desc:'혈액 생성을 돕는 신선한 주스',ing:['비트 1/4개','사과 1개','레몬즙 1큰술','물 100ml'],steps:['비트와 사과를 자른다','블렌더에 물과 함께 간다','레몬즙을 넣고 섞는다'],tip:'비트의 엽산이 적혈구 생성에 도움됩니다.'},
-{name:'닭간 볶음',emoji:'🫒',time:'20분',cal:220,pro:24,desc:'철분의 보고, 닭간 요리',ing:['닭간 200g','양파 1/2개','간장 2큰술','설탕 1큰술','생강즙'],steps:['닭간을 우유에 30분 담가 핏물 제거','양파와 함께 볶는다','간장, 설탕, 생강즙으로 양념','참기름으로 마무리'],tip:'간이 부담스러우면 소량씩 나눠 드세요.'}
-],
-snack:[
-{name:'그릭요거트 과일 파르페',emoji:'🍨',time:'5분',cal:230,pro:15,desc:'단백질 풍부한 달콤한 간식',ing:['그릭요거트 150g','딸기 3개','블루베리 한 줌','그래놀라 2큰술','꿀'],steps:['유리잔에 요거트를 깐다','과일을 올린다','그래놀라와 꿀을 뿌린다'],tip:'식간에 단백질과 비타민을 동시에 보충합니다.'},
-{name:'두유 팥 셰이크',emoji:'🫘',time:'5분',cal:280,pro:12,desc:'달콤 고소한 고열량 음료',ing:['두유 250ml','단팥 3큰술','얼음','꿀 약간'],steps:['모든 재료를 블렌더에 넣는다','곱게 갈아준다','차갑게 마신다'],tip:'팥의 철분과 두유의 단백질이 모두 보충됩니다.'},
-{name:'치즈 토스트',emoji:'🧈',time:'5분',cal:300,pro:12,desc:'간편한 고열량 간식',ing:['식빵 2장','슬라이스 치즈 2장','버터 1큰술'],steps:['식빵에 버터를 바른다','치즈를 올린다','팬이나 토스터에 구워 치즈를 녹인다'],tip:'입맛 없을 때 간편하게 열량을 보충합니다.'},
-{name:'호두 대추 영양바',emoji:'🌰',time:'20분',cal:260,pro:6,desc:'직접 만드는 건강 에너지바',ing:['호두 1/2컵','대추 10개','오트밀 1/2컵','꿀 2큰술','코코넛오일'],steps:['대추 씨를 빼고 잘게 자른다','모든 재료를 섞어 반죽한다','틀에 눌러 담는다','냉장고에서 1시간 굳힌다'],tip:'한 번에 만들어두면 일주일간 간식으로 편리합니다.'}
-],
-soup:[
-{name:'사골 곰탕',emoji:'🍖',time:'시판 가능',cal:250,pro:20,desc:'깊은 맛의 보양 곰탕',ing:['사골육수(시판) 500ml','소금','대파','밥(선택)'],steps:['사골육수를 끓인다','소금으로 간한다','대파를 송송 썰어 넣는다','밥을 말아 먹어도 좋다'],tip:'기력이 많이 떨어졌을 때 편하게 드실 수 있습니다.'},
-{name:'들깨 수제비',emoji:'🥟',time:'40분',cal:380,pro:12,desc:'고소한 들깨 국물에 부드러운 수제비',ing:['밀가루 1컵','들깨가루 3큰술','감자 1개','호박 1/4개','멸치육수 4컵'],steps:['밀가루에 물을 넣어 반죽한다','육수에 감자와 호박을 넣고 끓인다','반죽을 떼어 넣는다','들깨가루를 풀어 넣고 한소끔 끓인다'],tip:'들깨의 고소한 맛이 식욕을 돋웁니다.'},
-{name:'콩나물 국밥',emoji:'🍲',time:'25분',cal:300,pro:15,desc:'속을 풀어주는 따뜻한 국밥',ing:['콩나물 200g','밥 1공기','달걀 1개','새우젓 1큰술','대파'],steps:['콩나물을 물에 넣고 끓인다','밥을 넣는다','달걀을 풀어 넣는다','새우젓으로 간한다'],tip:'속이 답답할 때 따뜻하게 한 그릇 드시면 좋습니다.'},
-{name:'버섯 들깨탕',emoji:'🍄',time:'25분',cal:180,pro:8,desc:'면역력에 좋은 버섯과 고소한 들깨',ing:['표고버섯 3개','느타리버섯 한 줌','들깨가루 3큰술','멸치육수 3컵','두부 1/4모'],steps:['버섯을 먹기 좋게 찢는다','육수에 버섯과 두부를 넣고 끓인다','들깨가루를 풀어 넣는다','소금으로 간한다'],tip:'버섯의 베타글루칸이 면역력 강화에 도움됩니다.'}
-]
+nausea:[{name:'생강 미음',emoji:'🍚',time:'20분',cal:180,pro:3,desc:'구역감을 줄여주는 생강 쌀미음',ing:['쌀 1/2컵','생강 1쪽','물 4컵','소금','꿀'],steps:['쌀을 불려 물과 끓인다','생강 넣고 약불 20분','체에 걸러 미음만 받는다','간한다'],tip:'항암 당일~2일차에 특히 좋습니다.'},{name:'바나나 두부 스무디',emoji:'🍌',time:'5분',cal:250,pro:12,desc:'단백질 풍부한 영양 스무디',ing:['바나나 1개','연두부 1/2모','우유 200ml','꿀'],steps:['블렌더에 넣고 간다'],tip:'식사 대용으로 좋습니다.'},{name:'감자 수프',emoji:'🥔',time:'30분',cal:220,pro:6,desc:'담백한 감자 수프',ing:['감자 2개','양파','우유 200ml','버터'],steps:['감자와 양파를 버터에 볶는다','물 넣고 끓인다','블렌더로 갈아 우유 넣는다'],tip:'향이 약해 구역감 시에도 수월합니다.'},{name:'매실 레몬 에이드',emoji:'🍋',time:'3분',cal:60,pro:0,desc:'상큼한 구역감 완화 음료',ing:['매실청 2큰술','레몬즙','탄산수 300ml'],steps:['재료를 섞어 얼음을 넣는다'],tip:'입안이 텁텁할 때 좋습니다.'},{name:'크래커 & 치즈',emoji:'🧀',time:'3분',cal:200,pro:8,desc:'마른 음식으로 구역감 완화',ing:['크래커 8장','크림치즈','오이'],steps:['크래커에 치즈를 바르고 오이를 올린다'],tip:'아침 빈속에 구역감 예방에 좋습니다.'}],
+esoph:[{name:'달걀 찜',emoji:'🥚',time:'15분',cal:160,pro:14,desc:'부드러운 고단백 달걀찜',ing:['달걀 3개','멸치육수 180ml','소금','참기름'],steps:['달걀을 풀어 육수와 섞는다','체에 걸러 중약불 10분 찐다'],tip:'식도가 아플 때 가장 추천합니다.'},{name:'호박 죽',emoji:'🎃',time:'40분',cal:200,pro:4,desc:'부드러운 단호박 죽',ing:['단호박 1/4개','찹쌀가루','물 3컵'],steps:['단호박을 찐 후 블렌더에 간다','찹쌀가루 넣고 끓인다'],tip:'삼키기 편하고 열량 보충에 좋습니다.'},{name:'연두부 우동',emoji:'🍜',time:'15분',cal:320,pro:15,desc:'부드러운 연두부 소스 우동',ing:['우동면','연두부','참깨','간장'],steps:['우동면을 푹 삶는다','연두부 소스를 만들어 끼얹는다'],tip:'면을 오래 삶으면 삼키기 수월합니다.'},{name:'으깬 감자',emoji:'🥔',time:'25분',cal:280,pro:8,desc:'크리미 감자',ing:['감자 2개','우유','버터','소금'],steps:['감자를 삶아 으깨고 버터와 우유를 넣는다'],tip:'목이 아플 때 든든합니다.'},{name:'바나나 오트밀',emoji:'🥣',time:'10분',cal:260,pro:8,desc:'부드러운 오트밀',ing:['오트밀','우유 250ml','바나나','꿀'],steps:['우유에 오트밀을 끓이고 바나나를 으깨 넣는다'],tip:'식도 자극이 적습니다.'}],
+immun:[{name:'소고기 뭇국',emoji:'🥩',time:'40분',cal:280,pro:22,desc:'고단백 보양식',ing:['소고기 150g','무','대파','국간장','참기름'],steps:['소고기를 볶고 무와 물을 넣어 30분 끓인다'],tip:'백혈구 회복기에 좋습니다.'},{name:'닭가슴살 리조또',emoji:'🍗',time:'35분',cal:380,pro:28,desc:'고단백 한 그릇',ing:['닭가슴살','밥','양파','버섯','우유','치즈'],steps:['닭가슴살을 삶아 찢고 채소를 볶아 밥과 우유를 넣고 치즈를 녹인다'],tip:'영양소를 고루 섭취합니다.'},{name:'시금치 된장국',emoji:'🥬',time:'20분',cal:120,pro:8,desc:'철분·엽산 풍부',ing:['시금치','두부','된장','멸치육수'],steps:['육수에 된장을 풀고 두부와 시금치를 넣는다'],tip:'빈혈 예방에 좋습니다.'},{name:'연어 구이 덮밥',emoji:'🐟',time:'15분',cal:420,pro:30,desc:'오메가3 풍부',ing:['연어 100g','아보카도','밥','간장'],steps:['연어를 구워 밥 위에 올린다'],tip:'면역 최저기엔 반드시 완전히 익혀서.'},{name:'삼계탕',emoji:'🐔',time:'50분',cal:450,pro:35,desc:'한방 보양식',ing:['닭 반 마리','찹쌀','대추','마늘','황기'],steps:['닭에 재료를 넣고 40분 푹 끓인다'],tip:'기력 회복에 최고입니다.'}],
+energy:[{name:'검은깨 셰이크',emoji:'🥛',time:'3분',cal:350,pro:10,desc:'간편 고열량 음료',ing:['미숫가루','검은깨','우유','꿀','바나나'],steps:['블렌더에 간다'],tip:'식사 힘든 날 수시로 드세요.'},{name:'아보카도 참치 덮밥',emoji:'🥑',time:'10분',cal:450,pro:25,desc:'건강한 지방+단백질',ing:['밥','아보카도','참치캔','간장'],steps:['밥 위에 재료를 올린다'],tip:'체중 유지에 좋습니다.'},{name:'고구마 치즈 구이',emoji:'🍠',time:'25분',cal:320,pro:10,desc:'고열량 간식',ing:['고구마','모짜렐라 치즈','버터','꿀'],steps:['고구마를 익히고 치즈를 녹인다'],tip:'간식으로 열량을 늘릴 수 있어요.'},{name:'견과류 에너지 볼',emoji:'🥜',time:'15분',cal:280,pro:9,desc:'한입 간식볼',ing:['오트밀','땅콩버터','꿀','초코칩'],steps:['섞어서 동그랗게 빚어 냉장 보관'],tip:'일주일 간식으로 편리합니다.'},{name:'크림 파스타',emoji:'🍝',time:'20분',cal:520,pro:18,desc:'고열량 파스타',ing:['파스타면','베이컨','생크림','파마산 치즈'],steps:['파스타를 삶고 베이컨과 생크림 소스를 만든다'],tip:'체중 유지가 필요할 때 좋습니다.'}],
+digest:[{name:'잣죽',emoji:'🌰',time:'30분',cal:240,pro:6,desc:'고소한 영양죽',ing:['쌀','잣','물','소금'],steps:['쌀과 잣을 블렌더에 갈아 끓인다'],tip:'소화 부담이 거의 없습니다.'},{name:'양배추 달걀 수프',emoji:'🥗',time:'15분',cal:150,pro:10,desc:'위장 보호 수프',ing:['양배추','달걀','멸치육수'],steps:['양배추를 끓이고 달걀을 풀어 넣는다'],tip:'비타민U가 위장을 보호합니다.'},{name:'두부 채소 수프',emoji:'🫕',time:'20분',cal:180,pro:14,desc:'소화 잘 되는 수프',ing:['두부','감자','당근','양파'],steps:['채소를 끓이고 두부를 으깨 넣는다'],tip:'단백질 섭취가 됩니다.'},{name:'나박김치 국수',emoji:'🍜',time:'15분',cal:250,pro:7,desc:'시원한 국수',ing:['소면','나박김치 국물','오이','달걀'],steps:['소면을 삶아 나박김치 국물을 부는다'],tip:'속이 더부룩할 때 가볍게 좋습니다.'}],
+blood:[{name:'소고기 미역국',emoji:'🥬',time:'40분',cal:200,pro:18,desc:'철분 풍부 보양식',ing:['소고기 100g','마른미역','참기름','국간장'],steps:['미역을 불려 소고기와 볶은 후 끓인다'],tip:'빈혈 예방에 탁월합니다.'},{name:'시금치 볶음밥',emoji:'🍳',time:'15분',cal:350,pro:16,desc:'철분+단백질',ing:['밥','시금치','달걀','간장'],steps:['시금치를 데쳐 달걀과 함께 볶음밥을 만든다'],tip:'철분 보충에 간편합니다.'},{name:'비트 사과 주스',emoji:'🧃',time:'5분',cal:120,pro:2,desc:'혈액 생성 돕는 주스',ing:['비트','사과','레몬즙'],steps:['블렌더에 간다'],tip:'엽산이 적혈구 생성에 도움됩니다.'},{name:'닭간 볶음',emoji:'🫒',time:'20분',cal:220,pro:24,desc:'철분의 보고',ing:['닭간 200g','양파','간장','설탕'],steps:['닭간을 우유에 담갔다가 양파와 볶는다'],tip:'소량씩 나눠 드세요.'}],
+snack:[{name:'그릭요거트 파르페',emoji:'🍨',time:'5분',cal:230,pro:15,desc:'단백질 간식',ing:['그릭요거트','딸기','블루베리','그래놀라'],steps:['유리잔에 층층이 담는다'],tip:'식간 영양 보충에 좋습니다.'},{name:'두유 팥 셰이크',emoji:'🫘',time:'5분',cal:280,pro:12,desc:'고소한 음료',ing:['두유 250ml','단팥','얼음'],steps:['블렌더에 간다'],tip:'철분과 단백질 보충됩니다.'},{name:'치즈 토스트',emoji:'🧈',time:'5분',cal:300,pro:12,desc:'간편 고열량 간식',ing:['식빵','치즈','버터'],steps:['버터 바르고 치즈 올려 굽는다'],tip:'열량 보충에 간편합니다.'},{name:'호두 대추 영양바',emoji:'🌰',time:'20분',cal:260,pro:6,desc:'에너지바',ing:['호두','대추','오트밀','꿀'],steps:['섞어서 틀에 눌러 굳힌다'],tip:'일주일 간식으로 만들어두세요.'}],
+soup:[{name:'사골 곰탕',emoji:'🍖',time:'시판 가능',cal:250,pro:20,desc:'보양 곰탕',ing:['사골육수','소금','대파','밥'],steps:['끓여서 간한다'],tip:'기력 떨어졌을 때 편하게 드세요.'},{name:'들깨 수제비',emoji:'🥟',time:'40분',cal:380,pro:12,desc:'고소한 수제비',ing:['밀가루','들깨가루','감자','호박','멸치육수'],steps:['반죽을 떼어 넣고 들깨가루를 풀어 끓인다'],tip:'식욕을 돋웁니다.'},{name:'콩나물 국밥',emoji:'🍲',time:'25분',cal:300,pro:15,desc:'따뜻한 국밥',ing:['콩나물','밥','달걀','새우젓'],steps:['콩나물을 끓이고 밥과 달걀을 넣는다'],tip:'속이 답답할 때 좋습니다.'},{name:'버섯 들깨탕',emoji:'🍄',time:'25분',cal:180,pro:8,desc:'면역력 버섯탕',ing:['표고버섯','느타리','들깨가루','멸치육수','두부'],steps:['버섯과 두부를 끓이고 들깨가루를 넣는다'],tip:'베타글루칸이 면역력에 좋습니다.'}]
 };
-
-const DT=[
-{day:'항암 당일',icon:'💉',tips:['미음, 죽 등 유동식 위주','생강차로 구역감 예방','소량씩 자주 (2시간 간격)','수분 충분히 섭취','식사 전 레몬 향을 맡으면 구역감 완화']},
-{day:'항암 후 1~3일',icon:'😴',tips:['찬 음식이 구역감에 도움','신맛 나는 음식 피하기','기름진 음식, 강한 냄새 피하기','크래커·토스트 등 마른 음식 도움','식사 30분 전후 물 마시기 자제']},
-{day:'항암 후 4~7일',icon:'📈',tips:['서서히 일반식으로 전환','단백질 섭취 늘리기','소화 잘 되는 음식 위주','비타민 풍부한 과일 섭취','가벼운 산책으로 식욕 촉진']},
-{day:'항암 후 8~14일',icon:'⚠️',tips:['⚡ 백혈구 최저기 - 날음식 금지','회, 생과일주스, 샐러드 피하기','모든 음식 완전히 익혀서 섭취','손 씻기 철저, 식기 소독','사람 많은 곳 피하기']},
-{day:'회복기 (15일~)',icon:'🌱',tips:['고단백·고열량 식사 적극적으로','다양한 채소·과일 재개','체중 유지에 신경쓰기','다음 사이클 전 체력 비축','충분한 수면과 가벼운 운동']}
-];
-
-const AVOID=[
-{food:'날음식 (회, 육회)',reason:'면역 저하 시 식중독 위험',icon:'🐟'},
-{food:'자몽·자몽주스',reason:'일부 항암제와 상호작용',icon:'🍊'},
-{food:'술',reason:'간 부담 증가, 약물 대사 방해',icon:'🍺'},
-{food:'건강보조식품·한약',reason:'반드시 의료진 상의 후 복용',icon:'💊'},
-{food:'매운 음식',reason:'식도·위장 점막 자극',icon:'🌶️'},
-{food:'너무 뜨거운 음식',reason:'식도 자극, 방사선 치료 중 특히',icon:'🔥'},
-{food:'훈제·가공육',reason:'발암 위험, 나트륨 과다',icon:'🥓'},
-{food:'카페인 과다',reason:'수분 배출 촉진, 수면 방해',icon:'☕'}
-];
-const GOOD=[
-{food:'달걀·두부·생선',reason:'양질의 단백질, 소화 부담 적음',icon:'🥚'},
-{food:'바나나·감자·고구마',reason:'부드럽고 열량 보충에 효과적',icon:'🍌'},
-{food:'된장·청국장',reason:'발효식품, 장 건강에 도움',icon:'🫘'},
-{food:'시금치·브로콜리',reason:'철분·엽산 풍부, 빈혈 예방',icon:'🥦'},
-{food:'생강차·매실차',reason:'구역감 완화, 소화 촉진',icon:'🍵'},
-{food:'버섯류',reason:'베타글루칸으로 면역력 강화',icon:'🍄'},
-{food:'견과류',reason:'건강한 지방, 열량 보충',icon:'🥜'},
-{food:'요거트',reason:'장 건강, 단백질 보충',icon:'🥛'}
-];
-
-const SYM=['구역감/메스꺼움','구토','식욕 부진','피로감','입안 헐음/구내염','설사','변비','손발 저림','탈모','발열/오한','통증','숨가쁨','피부 변화','수면 장애','불안/우울','부종'];
-
-const GUIDE_SECTIONS=[
-{title:'🫁 흉부 방사선 치료 시 식사 관리',items:[
-{subtitle:'식도가 따끔하고 아프실 때',tips:['딱딱하고 거친 음식은 피하고, 삼키기 쉬운 부드러운 음식(죽, 미음, 부드러운 빵, 퓨레 등)을 드세요','아주 뜨거운 음식은 식도를 자극하므로 실온으로 식히거나 약간 차갑게 드시는 것이 좋습니다','자극적인 향신료나 맵고 짠 양념은 피하세요']},
-{subtitle:'소화가 잘 안 되고 울렁거리실 때',tips:['한 번에 많이 드시기보다 소화가 잘 되는 음식을 조금씩 자주(하루 5~6끼) 나누어 드세요','식사 전후로 물을 너무 많이 드시면 포만감 때문에 식사량이 줄어들 수 있으니 주의해 주세요']}
-]},
-{title:'💊 항암 치료 중 증상별 관리법',items:[
-{subtitle:'식욕이 없으실 때',tips:['실내에 음식 냄새가 나지 않게 자주 환기해 주세요','평소 좋아하시거나 갑자기 드시고 싶은 음식이 생기면 외식하는 것도 좋은 방법입니다']},
-{subtitle:'음식 맛이나 냄새가 다르게 느껴지실 때',tips:['고기가 싫으시다면 생선, 계란, 두부, 유제품 등으로 단백질을 꼭 보충해 주세요','요리 시 향이 좋은 양념(레몬즙, 와인)이나 새콤달콤한 소스를 곁들이면 입맛을 돋우는 데 도움이 됩니다']},
-{subtitle:'울렁거리고 토할 것 같으실 때',tips:['증상이 심할 때는 억지로 드시지 말고 휴식을 취하세요','차가운 음료, 냄새가 적고 수분이 적은 마른 음식(누른 밥, 토스트), 부드러운 과일이 도움이 됩니다','속이 좀 진정되면 미음이나 죽부터 시작해 서서히 일반식으로 넘어갑니다']},
-{subtitle:'입과 목이 아프실 때',tips:['삼키기 쉬운 부드러운 음식(죽, 미음, 부드러운 빵)을 드세요','뜨거운 음식은 피하고, 실온으로 식히거나 차게 해서 드시는 것이 좋습니다','입안이 쓰리면 빨대를 활용해 보세요']},
-{subtitle:'설사를 하실 때',tips:['탈수 방지를 위해 물이나 이온음료를 충분히 드시고, 소화가 잘 되는 음식(흰죽, 감자 등)을 드세요','강한 양념, 기름진 음식, 유제품, 카페인, 탄산음료는 꼭 피하세요','손실된 칼륨 보충을 위해 바나나, 토마토가 좋습니다']},
-{subtitle:'변비가 생기셨을 때',tips:['식사량과 수분 섭취를 늘리고, 섬유질이 많은 채소를 드세요','배변 1시간 전에 따뜻한 차를 드시면 장 운동에 도움이 됩니다']},
-{subtitle:'면역력이 떨어지셨을 때 (백혈구 저하)',tips:['절대 주의: 익히지 않은 고기, 생선, 조개, 젓갈류(게장 등)는 피하세요','과일과 채소는 아주 깨끗하게 씻어 드시고, 물은 반드시 끓여서 드세요']}
-]}
-];
-
-const QNA=[
-{q:'Q. 암에 좋다는 엑기스나 달인 물, 먹어도 될까요?',a:'절대 금물입니다. 간이나 신장에 무리를 주어 오히려 치료에 큰 방해가 될 수 있습니다. 반드시 의료진과 상의하세요.'},
-{q:'Q. 암 환자는 고기를 먹으면 안 되나요?',a:'드셔야 합니다! 고기는 체력 회복에 꼭 필요한 양질의 단백질입니다. 다만 굽거나 튀기기보다는 삶거나 끓인 형태(수육, 찜 등)로 일주일에 200~300g 정도 챙겨 드시는 것이 좋습니다.'},
-{q:'Q. 입이나 식도가 헐고 설사할 때, 잡곡밥을 드셔야 할까요?',a:'아닙니다. 거친 잡곡이나 고섬유질 채소는 헐어있는 점막을 자극해 증상을 악화시킬 수 있습니다. 이때는 하얀 쌀밥이나 부드러운 음식 위주로 드셔야 합니다.'},
-{q:'Q. 면역력 높이는 특별한 음식이 있나요?',a:'한순간에 면역력을 높여주는 마법의 음식은 없습니다. 입맛이 없으시더라도 밥, 고기/생선, 채소를 골고루, 꾸준히 드시는 것이 최고의 면역력 회복제입니다.'}
-];
-
-// State
-let S={tab:'recipes',cat:'nausea',recipe:null,dailyIdx:0,water:0,meals:[],cIng:{},sym:{},weight:'',wH:[],diary:'',dH:[],manualName:'',manualCal:'',manualPro:'',mealHistory:[]};
-function load(){try{const s=localStorage.getItem('isg_s');if(s){Object.assign(S,JSON.parse(s));S.recipe=null;}}catch(e){}}
-function save(){try{localStorage.setItem('isg_s',JSON.stringify(S));}catch(e){}}
+const DT=[{day:'항암 당일',icon:'💉',tips:['유동식 위주','생강차로 구역감 예방','소량씩 자주 (2시간 간격)','수분 충분히','레몬 향 활용']},{day:'항암 후 1~3일',icon:'😴',tips:['찬 음식이 도움','신맛 피하기','기름진 음식·강한 냄새 피하기','크래커·토스트 도움','식사 전후 물 자제']},{day:'항암 후 4~7일',icon:'📈',tips:['서서히 일반식으로','단백질 섭취 늘리기','소화 잘 되는 음식','과일 섭취','가벼운 산책']},{day:'항암 후 8~14일',icon:'⚠️',tips:['⚡ 백혈구 최저기 - 날음식 금지','회, 샐러드 피하기','모든 음식 익혀서','손 씻기·식기 소독','사람 많은 곳 피하기']},{day:'회복기 (15일~)',icon:'🌱',tips:['고단백·고열량 적극적으로','채소·과일 재개','체중 유지','체력 비축','충분한 수면']}];
+const AVOID=[{food:'날음식 (회, 육회)',reason:'식중독 위험',icon:'🐟'},{food:'자몽·자몽주스',reason:'항암제와 상호작용',icon:'🍊'},{food:'술',reason:'간 부담',icon:'🍺'},{food:'건강보조식품·한약',reason:'의료진 상의 필요',icon:'💊'},{food:'매운 음식',reason:'식도·위장 자극',icon:'🌶️'},{food:'뜨거운 음식',reason:'식도 자극',icon:'🔥'},{food:'훈제·가공육',reason:'발암 위험',icon:'🥓'},{food:'카페인 과다',reason:'수면 방해',icon:'☕'}];
+const GOOD=[{food:'달걀·두부·생선',reason:'양질의 단백질',icon:'🥚'},{food:'바나나·감자·고구마',reason:'부드럽고 열량 보충',icon:'🍌'},{food:'된장·청국장',reason:'발효식품, 장 건강',icon:'🫘'},{food:'시금치·브로콜리',reason:'철분·엽산',icon:'🥦'},{food:'생강차·매실차',reason:'구역감 완화',icon:'🍵'},{food:'버섯류',reason:'면역력 강화',icon:'🍄'},{food:'견과류',reason:'건강한 지방',icon:'🥜'},{food:'요거트',reason:'장 건강',icon:'🥛'}];
+const SYM=['구역감','구토','식욕부진','피로감','구내염','설사','변비','손발저림','탈모','발열','통증','숨가쁨','피부변화','수면장애','불안','부종'];
+const GS=[{title:'🫁 흉부 방사선 치료 시 식사 관리',items:[{subtitle:'식도가 아프실 때',tips:['부드러운 음식(죽, 미음, 퓨레)을 드세요','뜨거운 음식은 실온으로 식혀서 드세요','맵고 짠 양념은 피하세요']},{subtitle:'소화가 안 되고 울렁거리실 때',tips:['조금씩 자주(하루 5~6끼) 나누어 드세요','식사 전후 물을 많이 드시면 식사량이 줄 수 있습니다']}]},{title:'💊 항암 치료 중 증상별 관리',items:[{subtitle:'식욕이 없으실 때',tips:['실내 환기를 자주 해주세요','드시고 싶은 음식이 생기면 외식도 좋습니다']},{subtitle:'맛이 다르게 느껴질 때',tips:['고기 대신 생선, 계란, 두부로 단백질 보충','레몬즙이나 새콤한 소스가 입맛을 돋웁니다']},{subtitle:'울렁거리고 토할 것 같을 때',tips:['심할 때는 억지로 드시지 마세요','차가운 음료, 마른 음식(토스트)이 도움','미음부터 시작해 서서히 일반식으로']},{subtitle:'입과 목이 아프실 때',tips:['부드러운 음식을 드세요','뜨거운 음식 피하고 실온으로','빨대를 활용해 보세요']},{subtitle:'설사를 하실 때',tips:['물, 이온음료 충분히','바나나, 토마토로 칼륨 보충','기름진 음식, 유제품, 카페인 피하세요']},{subtitle:'변비가 생기셨을 때',tips:['수분과 섬유질 늘리기','배변 1시간 전 따뜻한 차']},{subtitle:'면역력 떨어지셨을 때',tips:['날음식, 젓갈류 절대 금지','과일·채소는 깨끗이 씻고 물은 끓여서']}]}];
+const QNA=[{q:'Q. 엑기스나 달인 물, 먹어도 될까요?',a:'절대 금물입니다. 간이나 신장에 무리를 줘 치료에 방해가 됩니다.'},{q:'Q. 고기를 먹으면 안 되나요?',a:'드셔야 합니다! 삶거나 찜으로 일주일 200~300g 정도 챙기세요.'},{q:'Q. 잡곡밥을 드셔야 할까요?',a:'입이나 식도가 헐었을 때는 하얀 쌀밥이 좋습니다.'},{q:'Q. 면역력 높이는 특별한 음식?',a:'마법의 음식은 없습니다. 골고루 꾸준히 드시는 것이 최고입니다.'}];
+let S={tab:'calendar',cat:'nausea',recipe:null,dailyIdx:0,water:0,meals:[],cIng:{},sym:{},diary:'',dH:[],manualName:'',manualCal:'',manualPro:'',mealHistory:[],calYear:new Date().getFullYear(),calMonth:new Date().getMonth(),selDate:new Date().toISOString().split('T')[0],vitals:{},chemoInfo:{cycle:'',startDate:''}};
+function load(){try{const s=localStorage.getItem('isg2');if(s){Object.assign(S,JSON.parse(s));S.recipe=null;}}catch(e){}}
+function save(){try{localStorage.setItem('isg2',JSON.stringify(S));}catch(e){}}
 load();
-
 function rTabs(){document.getElementById('tabBar').innerHTML=TABS.map(t=>`<button class="t ${S.tab===t.id?'a':''}" onclick="sTab('${t.id}')"><i>${t.icon}</i>${t.label}</button>`).join('');}
 function sTab(id){S.tab=id;S.recipe=null;ren();}
+function ren(){rTabs();const a=document.getElementById('app');switch(S.tab){case'calendar':a.innerHTML=rCal();break;case'recipes':a.innerHTML=S.recipe?rDetail():rList();break;case'daily':a.innerHTML=rDaily();break;case'tracker':a.innerHTML=rTracker();break;case'health':a.innerHTML=rHealth();break;case'guide':a.innerHTML=rGuide();break;case'share':a.innerHTML=rShare();break;}save();}
 
-function ren(){rTabs();const a=document.getElementById('app');
-switch(S.tab){
-case'recipes':a.innerHTML=S.recipe?rDetail():rList();break;
-case'daily':a.innerHTML=rDaily();break;
-case'tracker':a.innerHTML=rTracker();break;
-case'health':a.innerHTML=rHealth();break;
-case'guide':a.innerHTML=rGuide();break;
-case'avoid':a.innerHTML=rAvoid();break;
-}save();}
+function rCal(){
+const y=S.calYear,m=S.calMonth,today=new Date().toISOString().split('T')[0];
+const mN=['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+const dN=['일','월','화','수','목','금','토'];
+const fd=new Date(y,m,1).getDay(),dim=new Date(y,m+1,0).getDate();
+let cells=dN.map((d,i)=>`<div class="cal-hd" style="${i===0?'color:var(--coral)':''}${i===6?'color:var(--blue)':''}">${d}</div>`).join('');
+for(let i=0;i<fd;i++)cells+=`<div class="cal-day empty"></div>`;
+for(let d=1;d<=dim;d++){
+const ds=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+const hasData=S.vitals[ds]||S.dH.find(x=>x.date===ds);
+const dow=new Date(y,m,d).getDay();
+let cls='cal-day';
+if(ds===today)cls+=' today';
+if(ds===S.selDate&&ds!==today)cls+=' sel';
+if(hasData)cls+=' has-data';
+if(dow===0)cls+=' sun';if(dow===6)cls+=' sat';
+cells+=`<div class="${cls}" onclick="selDay('${ds}')">${d}</div>`;}
 
-function rList(){
-const ch=CATS.map(c=>{const ac=S.cat===c.id;return`<button class="cb" style="background:${ac?c.color:'#fff'};color:${ac?'#fff':'#2D3A2D'};${ac?'box-shadow:0 4px 14px '+c.color+'40':''}" onclick="S.cat='${c.id}';ren()"><i>${c.emoji}</i><div class="l">${c.label}</div><div class="d">${c.desc}</div></button>`;}).join('');
-const rs=R[S.cat]||[];
-const lh=rs.map((r,i)=>`<div class="ri" onclick="oR('${S.cat}',${i})"><div><div class="rn">${r.emoji} ${r.name}</div><div class="rm">⏱ ${r.time} · 🔥 ${r.cal}kcal · 💪 ${r.pro}g</div></div><span style="color:#ccc;font-size:16px">›</span></div>`).join('');
-return`<div class="fd"><div class="cg">${ch}</div><div class="c"><h3>📋 ${CATS.find(c=>c.id===S.cat).label} 레시피 (${rs.length}개)</h3>${lh}</div></div>`;
+const sd=S.selDate,v=S.vitals[sd]||{},diary=S.dH.find(x=>x.date===sd);
+let chemoHtml='';
+if(S.chemoInfo.cycle&&S.chemoInfo.startDate){
+const diff=Math.floor((new Date(sd)-new Date(S.chemoInfo.startDate))/(864e5))+1;
+if(diff>0)chemoHtml=`<div class="chemo-badge">💉 ${S.chemoInfo.cycle}차 항암 ${diff}일째</div>`;
+}else if(S.chemoInfo.cycle){chemoHtml=`<div class="chemo-badge">💉 ${S.chemoInfo.cycle}차 항암</div>`;}
+
+let det=`<div class="c"><h3>📋 ${sd} 기록</h3>${chemoHtml}`;
+if(v.bp||v.temp||v.weight){
+det+=`<div class="record-card">`;
+if(v.bp)det+=`<div style="font-size:12px;margin-bottom:3px">🩸 혈압: <b>${v.bp}</b></div>`;
+if(v.temp)det+=`<div style="font-size:12px;margin-bottom:3px">🌡️ 체온: <b>${v.temp}°C</b></div>`;
+if(v.weight)det+=`<div style="font-size:12px;margin-bottom:3px">⚖️ 체중: <b>${v.weight}kg</b></div>`;
+det+=`<div style="display:flex;gap:4px;margin-top:6px"><button class="edit-btn" onclick="editV('${sd}')">✏️ 수정</button><button class="del-btn" onclick="delV('${sd}')">🗑️ 삭제</button></div></div>`;}
+else{det+=`<p style="font-size:11px;color:var(--txl)">바이탈 기록이 없습니다</p>`;}
+if(diary){
+det+=`<div class="record-card" style="margin-top:6px"><div style="font-size:11px;font-weight:600;margin-bottom:3px">📝 일기</div>`;
+if(diary.symptoms&&diary.symptoms.length)det+=`<div style="margin-bottom:3px">${diary.symptoms.map(s=>'<span class="badge" style="background:#FFF0F0;color:var(--coral)">'+s+'</span>').join('')}</div>`;
+det+=`<p style="font-size:11px;line-height:1.5">${diary.text||'(없음)'}</p><div style="display:flex;gap:4px;margin-top:6px"><button class="edit-btn" onclick="editD2('${sd}')">✏️ 수정</button><button class="del-btn" onclick="delD2('${sd}')">🗑️ 삭제</button></div></div>`;}
+det+=`</div>`;
+
+let inp=`<div class="c"><h3>✏️ ${sd} 기록 입력</h3>
+<div style="margin-bottom:10px"><div style="font-size:11px;font-weight:600;margin-bottom:5px">💉 항암 차수 설정</div>
+<div class="vital-row"><label>차수</label><input type="text" placeholder="예: 4" value="${S.chemoInfo.cycle}" oninput="S.chemoInfo.cycle=this.value;save()"></div>
+<div class="vital-row"><label>시작일</label><input type="date" value="${S.chemoInfo.startDate}" oninput="S.chemoInfo.startDate=this.value;save()"></div></div>
+<div style="font-size:11px;font-weight:600;margin-bottom:5px">🩺 바이탈 사인</div>
+<div class="vital-row"><label>🩸혈압</label><input type="text" id="vBp" placeholder="120/80" value="${v.bp||''}"></div>
+<div class="vital-row"><label>🌡️체온</label><input type="number" id="vTp" placeholder="36.5" step="0.1" value="${v.temp||''}"></div>
+<div class="vital-row"><label>⚖️체중</label><input type="number" id="vWt" placeholder="kg" step="0.1" value="${v.weight||''}"></div>
+<button class="btn bp" style="margin-top:6px" onclick="saveV('${sd}')">💾 바이탈 저장</button></div>`;
+
+return`<div class="fd"><div class="c"><div class="cal-nav"><button onclick="pM()">◀</button><span>${y}년 ${mN[m]}</span><button onclick="nM()">▶</button></div><div class="cal-grid">${cells}</div></div>${det}${inp}</div>`;
 }
+function selDay(d){S.selDate=d;ren();}
+function pM(){S.calMonth--;if(S.calMonth<0){S.calMonth=11;S.calYear--;}ren();}
+function nM(){S.calMonth++;if(S.calMonth>11){S.calMonth=0;S.calYear++;}ren();}
+function saveV(d){const bp=document.getElementById('vBp')?.value,tp=document.getElementById('vTp')?.value,wt=document.getElementById('vWt')?.value;if(!bp&&!tp&&!wt){alert('하나 이상 입력해주세요');return;}if(!S.vitals)S.vitals={};S.vitals[d]={bp:bp||null,temp:tp?parseFloat(tp):null,weight:wt?parseFloat(wt):null};save();alert('저장되었습니다 💚');ren();}
+function editV(d){const v=S.vitals[d];const bp=prompt('혈압:',v.bp||'');if(bp===null)return;const tp=prompt('체온(°C):',v.temp||'');if(tp===null)return;const wt=prompt('체중(kg):',v.weight||'');if(wt===null)return;S.vitals[d]={bp:bp||null,temp:tp?parseFloat(tp):null,weight:wt?parseFloat(wt):null};save();ren();}
+function delV(d){if(confirm(d+' 바이탈 삭제?')){delete S.vitals[d];save();ren();}}
+function editD2(d){const i=S.dH.findIndex(x=>x.date===d);if(i<0)return;const t=prompt('일기 수정:',S.dH[i].text);if(t===null)return;S.dH[i].text=t;save();ren();}
+function delD2(d){if(confirm(d+' 일기 삭제?')){S.dH=S.dH.filter(x=>x.date!==d);save();ren();}}
 
+function rList(){const ch=CATS.map(c=>{const ac=S.cat===c.id;return`<button class="cb" style="background:${ac?c.color:'#fff'};color:${ac?'#fff':'#2D3A2D'}" onclick="S.cat='${c.id}';ren()"><i>${c.emoji}</i><div class="l">${c.label}</div><div class="d">${c.desc}</div></button>`;}).join('');const rs=R[S.cat]||[];const lh=rs.map((r,i)=>`<div class="ri" onclick="oR('${S.cat}',${i})"><div><div style="font-size:12px;font-weight:600">${r.emoji} ${r.name}</div><div style="font-size:9px;color:var(--txl)">⏱${r.time} 🔥${r.cal}kcal 💪${r.pro}g</div></div><span style="color:#ccc">›</span></div>`).join('');return`<div class="fd"><div class="cg">${ch}</div><div class="c"><h3>📋 ${CATS.find(c=>c.id===S.cat).label} (${rs.length}개)</h3>${lh}</div></div>`;}
 function oR(cat,idx){S.recipe={cat,idx};S.cIng={};ren();}
-
-function rDetail(){
-const r=R[S.recipe.cat][S.recipe.idx];
-const ih=r.ing.map((g,i)=>`<div class="cr" onclick="tI(${i})"><div class="cc ${S.cIng[i]?'on':''}">✓</div><span style="${S.cIng[i]?'text-decoration:line-through;color:#8CA88C':''}">${g}</span></div>`).join('');
-const sh=r.steps.map((s,i)=>`<div style="display:flex;gap:9px;margin-bottom:9px"><div class="sn">${i+1}</div><p style="font-size:12px;line-height:1.6;padding-top:2px">${s}</p></div>`).join('');
-const lg=S.meals.some(m=>m.name===r.name);
-return`<div class="fd">
-<button class="bk" onclick="S.recipe=null;ren()">← 목록으로</button>
-<div class="c"><div class="dh"><i>${r.emoji}</i><h2>${r.name}</h2><p style="font-size:11px;color:#8CA88C;margin-top:3px">${r.desc}</p><div style="display:flex;justify-content:center;gap:22px;margin-top:12px"><div style="text-align:center"><div style="font-size:17px;font-weight:700;color:#5B8C5A">${r.cal}</div><div style="font-size:9px;color:#8CA88C">kcal</div></div><div style="text-align:center"><div style="font-size:17px;font-weight:700;color:#45B7D1">${r.pro}g</div><div style="font-size:9px;color:#8CA88C">단백질</div></div><div style="text-align:center"><div style="font-size:17px;font-weight:700;color:#F7DC6F">${r.time}</div><div style="font-size:9px;color:#8CA88C">조리시간</div></div></div></div></div>
-<div class="c"><h3>🥗 재료</h3>${ih}</div>
-<div class="c"><h3>👨‍🍳 만드는 법</h3>${sh}</div>
-<div class="tip"><div style="font-size:12px;font-weight:700;margin-bottom:3px">💡 항암 케어 팁</div><p style="font-size:11px;line-height:1.6;color:#4A6B4A">${r.tip}</p></div>
-<button class="btn bp" onclick="lM('${r.name}',${r.cal},${r.pro})" ${lg?'disabled style="opacity:.6"':''}>${lg?'✓ 기록 완료':'✅ 오늘 식사 기록하기'}</button>
-</div>`;
-}
-
+function rDetail(){const r=R[S.recipe.cat][S.recipe.idx];const ih=r.ing.map((g,i)=>`<div class="cr" onclick="tI(${i})"><div class="cc ${S.cIng[i]?'on':''}">✓</div><span style="${S.cIng[i]?'text-decoration:line-through;color:#8CA88C':''}">${g}</span></div>`).join('');const sh=r.steps.map((s,i)=>`<div style="display:flex;gap:8px;margin-bottom:7px"><div class="sn">${i+1}</div><p style="font-size:11px;line-height:1.5">${s}</p></div>`).join('');const lg=S.meals.some(m=>m.name===r.name);return`<div class="fd"><button class="bk" onclick="S.recipe=null;ren()">← 목록</button><div class="c"><div style="text-align:center;padding:8px 0"><div style="font-size:36px">${r.emoji}</div><h2 style="font-size:15px;font-weight:800;margin-top:4px">${r.name}</h2><p style="font-size:10px;color:var(--txl)">${r.desc}</p><div style="display:flex;justify-content:center;gap:18px;margin-top:8px"><div style="text-align:center"><div style="font-size:15px;font-weight:700;color:var(--g)">${r.cal}</div><div style="font-size:8px;color:var(--txl)">kcal</div></div><div style="text-align:center"><div style="font-size:15px;font-weight:700;color:var(--blue)">${r.pro}g</div><div style="font-size:8px;color:var(--txl)">단백질</div></div><div style="text-align:center"><div style="font-size:15px;font-weight:700;color:var(--gold)">${r.time}</div><div style="font-size:8px;color:var(--txl)">조리</div></div></div></div></div><div class="c"><h3>🥗 재료</h3>${ih}</div><div class="c"><h3>👨‍🍳 만드는 법</h3>${sh}</div><div class="tip"><p style="font-size:11px;line-height:1.5">💡 ${r.tip}</p></div><button class="btn bp" onclick="lM('${r.name}',${r.cal},${r.pro})" ${lg?'disabled style="opacity:.6"':''}>${lg?'✓ 기록됨':'✅ 식사 기록'}</button></div>`;}
 function tI(i){S.cIng[i]=!S.cIng[i];ren();}
-function lM(n,c,p){const now=new Date();S.meals.push({name:n,cal:c,pro:p,time:now.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})});ren();}
+function lM(n,c,p){S.meals.push({name:n,cal:c,pro:p,time:new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})});ren();}
 
-function rDaily(){
-const ps=DT.map((t,i)=>`<button class="dp" style="background:${S.dailyIdx===i?'#5B8C5A':'#fff'};color:${S.dailyIdx===i?'#fff':'#2D3A2D'}" onclick="S.dailyIdx=${i};ren()">${t.icon} ${t.day}</button>`).join('');
-const tip=DT[S.dailyIdx];
-const th=tip.tips.map((t,i)=>`<div style="display:flex;align-items:flex-start;gap:7px;padding:7px 0;${i<tip.tips.length-1?'border-bottom:1px solid #f0f4f0':''}"><div style="width:5px;height:5px;border-radius:50%;background:#5B8C5A;margin-top:6px;flex-shrink:0"></div><p style="font-size:12px;line-height:1.6">${t}</p></div>`).join('');
-return`<div class="fd">
-<div style="overflow-x:auto;white-space:nowrap;padding-bottom:3px;margin-bottom:10px">${ps}</div>
-<div class="c"><div style="text-align:center;margin-bottom:12px"><div style="font-size:36px">${tip.icon}</div><h3 style="font-size:17px;font-weight:800;margin-top:5px">${tip.day}</h3></div>${th}</div>
-<div class="tip w"><div style="font-size:12px;font-weight:700;margin-bottom:5px">📌 항암 사이클별 식사 핵심 원칙</div><div style="font-size:11px;line-height:1.8;color:#6B5B00">• 하루 목표: <b>1,800~2,200kcal</b>, 단백질 <b>70~90g</b><br>• 한 번에 많이 먹기보다 <b>하루 6회 소량씩</b><br>• 수분은 하루 <b>1.5~2리터</b> (식사 중 제외)<br>• 식사 30분 전후로 물 마시기 자제</div></div>
-</div>`;
-}
+function rDaily(){const ps=DT.map((t,i)=>`<button class="dp" style="background:${S.dailyIdx===i?'var(--g)':'#fff'};color:${S.dailyIdx===i?'#fff':'var(--tx)'}" onclick="S.dailyIdx=${i};ren()">${t.icon} ${t.day}</button>`).join('');const tip=DT[S.dailyIdx];const th=tip.tips.map(t=>`<div style="display:flex;gap:6px;padding:4px 0"><div style="width:5px;height:5px;border-radius:50%;background:var(--g);margin-top:5px;flex-shrink:0"></div><p style="font-size:11px;line-height:1.5">${t}</p></div>`).join('');return`<div class="fd"><div style="overflow-x:auto;white-space:nowrap;margin-bottom:8px">${ps}</div><div class="c"><div style="text-align:center;margin-bottom:8px"><div style="font-size:30px">${tip.icon}</div><h3 style="font-size:15px;font-weight:800;margin-top:3px">${tip.day}</h3></div>${th}</div><div class="tip w"><div style="font-size:11px;font-weight:700;margin-bottom:3px">📌 핵심 원칙</div><div style="font-size:10px;line-height:1.7;color:#6B5B00">• 하루: <b>1,800~2,200kcal</b>, 단백질 <b>70~90g</b><br>• <b>하루 6회 소량씩</b> · 수분 <b>1.5~2L</b></div></div></div>`;}
 
-function rTracker(){
-const tc=S.meals.reduce((s,m)=>s+m.cal,0);
-const tp=S.meals.reduce((s,m)=>s+m.pro,0);
-const cp=Math.min((tc/2000)*100,100);
-const pp=Math.min((tp/80)*100,100);
-const wb=Array.from({length:8}).map((_,i)=>`<button class="wb ${i<S.water?'on':''}" onclick="S.water=${i<S.water?i:i+1};ren()">${i<S.water?'💧':'○'}</button>`).join('');
-const ml=S.meals.length?S.meals.map((m,i)=>`<div class="ml" style="align-items:center"><div style="flex:1"><div style="font-size:12px;font-weight:600">${m.name}</div><div style="font-size:9px;color:#8CA88C">${m.time}</div></div><div style="text-align:right;margin-right:8px"><div style="font-size:11px;font-weight:600;color:#5B8C5A">${m.cal}kcal</div><div style="font-size:9px;color:#45B7D1">단백질 ${m.pro}g</div></div><div style="display:flex;gap:4px"><button onclick="editMeal(${i})" style="border:none;background:#E8F0E8;border-radius:6px;padding:4px 8px;font-size:10px;cursor:pointer;font-family:inherit;color:#5B8C5A">✏️</button><button onclick="delMeal(${i})" style="border:none;background:#FFF0F0;border-radius:6px;padding:4px 8px;font-size:10px;cursor:pointer;font-family:inherit;color:#FF6B6B">🗑️</button></div></div>`).join(''):'<div class="es"><i>🍴</i><p style="font-size:11px">레시피 탭 또는 아래에서 식사를 기록하세요</p></div>';
-const warn=tc>0&&tc<1500?'<div class="tip r"><p style="font-size:11px;color:#C0392B;font-weight:600">⚠️ 오늘 섭취 열량이 부족합니다. 간식이나 영양 음료를 추가로 드시는 것을 권합니다.</p></div>':'';
+function rTracker(){const tc=S.meals.reduce((s,m)=>s+m.cal,0),tp=S.meals.reduce((s,m)=>s+m.pro,0),cp=Math.min(tc/2000*100,100),pp=Math.min(tp/80*100,100);const wb=Array.from({length:8}).map((_,i)=>`<button class="wb ${i<S.water?'on':''}" onclick="S.water=${i<S.water?i:i+1};ren()">${i<S.water?'💧':'○'}</button>`).join('');const ml=S.meals.length?S.meals.map((m,i)=>`<div class="ml"><div style="flex:1"><div style="font-size:11px;font-weight:600">${m.name}</div><div style="font-size:8px;color:var(--txl)">${m.time}</div></div><div style="text-align:right;margin-right:5px"><div style="font-size:10px;font-weight:600;color:var(--g)">${m.cal}kcal</div><div style="font-size:8px;color:var(--blue)">${m.pro}g</div></div><div style="display:flex;gap:3px"><button class="edit-btn" onclick="eMeal(${i})">✏️</button><button class="del-btn" onclick="dMeal(${i})">🗑️</button></div></div>`).join(''):'<div class="es"><i>🍴</i><p style="font-size:10px">식사를 기록해보세요</p></div>';const warn=tc>0&&tc<1500?'<div class="tip r"><p style="font-size:10px;color:#C0392B;font-weight:600">⚠️ 섭취 열량이 부족합니다.</p></div>':'';return`<div class="fd"><div class="c"><h3>📊 오늘의 영양</h3><div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:10px;font-weight:600">🔥 열량</span><span style="font-size:10px;font-weight:700;color:var(--g)">${tc}/2,000kcal</span></div><div class="pg"><div class="pf" style="width:${cp}%;background:linear-gradient(90deg,var(--g),var(--teal))"></div></div></div><div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:10px;font-weight:600">💪 단백질</span><span style="font-size:10px;font-weight:700;color:var(--blue)">${tp}/80g</span></div><div class="pg"><div class="pf" style="width:${pp}%;background:linear-gradient(90deg,var(--blue),var(--teal))"></div></div></div><div><div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:10px;font-weight:600">💧 수분</span><span style="font-size:10px;font-weight:700;color:var(--blue)">${S.water}/8잔</span></div><div class="wr">${wb}</div></div></div><div class="c"><h3>✏️ 직접 기록</h3><div class="manual-row"><input type="text" id="mN" placeholder="음식 이름" value="${S.manualName||''}" oninput="S.manualName=this.value"></div><div class="manual-row"><input type="number" class="sm" id="mC" placeholder="칼로리" value="${S.manualCal||''}" oninput="S.manualCal=this.value"><input type="number" class="sm" id="mP" placeholder="단백질g" value="${S.manualPro||''}" oninput="S.manualPro=this.value"><button class="btn bp" style="width:auto;padding:8px 12px;font-size:11px" onclick="aManual()">추가</button></div></div><div class="c"><h3>🍽️ 오늘 식사</h3>${ml}</div>${warn}<button class="btn bo" onclick="resetT()" style="font-size:10px;padding:8px">🔄 초기화</button></div>`;}
+function aManual(){const n=S.manualName||'';if(!n.trim()){alert('음식 이름을 입력해주세요');return;}S.meals.push({name:n.trim(),cal:parseInt(S.manualCal)||0,pro:parseInt(S.manualPro)||0,time:new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})});S.manualName='';S.manualCal='';S.manualPro='';ren();}
+function eMeal(i){const m=S.meals[i];const n=prompt('음식:',m.name);if(n===null)return;const c=prompt('칼로리:',m.cal);if(c===null)return;const p=prompt('단백질:',m.pro);if(p===null)return;S.meals[i]={name:n||m.name,cal:parseInt(c)||0,pro:parseInt(p)||0,time:m.time};ren();}
+function dMeal(i){if(confirm(S.meals[i].name+' 삭제?')){S.meals.splice(i,1);ren();}}
+function resetT(){if(confirm('오늘 기록 초기화?')){if(S.meals.length){const d=new Date().toISOString().split('T')[0];S.meals.forEach(m=>S.mealHistory.push({...m,date:d}));}S.meals=[];S.water=0;ren();}}
 
-// Past meal history
-const today=new Date().toISOString().split('T')[0];
-const pastMH=S.mealHistory||[];
-const pastDates=[...new Set(pastMH.map(h=>h.date))].sort().reverse().slice(0,7);
-let histHtml='';
-if(pastDates.length){
-histHtml='<div class="c"><h3>📖 지난 식사 기록</h3>';
-pastDates.forEach(d=>{
-const dayMeals=pastMH.filter(m=>m.date===d);
-const dayTc=dayMeals.reduce((s,m)=>s+m.cal,0);
-const dayTp=dayMeals.reduce((s,m)=>s+m.pro,0);
-histHtml+=`<div style="padding:8px 0;border-bottom:1px solid #f0f4f0"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px"><span style="font-size:11px;font-weight:700">📅 ${d}</span><span style="font-size:10px;color:#5B8C5A">${dayTc}kcal · ${dayTp}g 단백질</span></div>`;
-dayMeals.forEach((m,i)=>{
-histHtml+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0 3px 12px"><span style="font-size:11px">${m.name} <span style="color:#8CA88C;font-size:9px">${m.time}</span></span><div style="display:flex;align-items:center;gap:6px"><span style="font-size:10px;color:#5B8C5A">${m.cal}kcal</span><button onclick="delPastMeal('${d}',${i})" style="border:none;background:#FFF0F0;border-radius:5px;padding:2px 6px;font-size:9px;cursor:pointer;color:#FF6B6B">삭제</button></div></div>`;
-});
-histHtml+=`</div>`;
-});
-histHtml+='</div>';
-}
+function rHealth(){const sb=SYM.map((s,i)=>`<button class="sb ${S.sym[i]?'on':''}" onclick="S.sym[${i}]=!S.sym[${i}];ren()">${s}</button>`).join('');const today=new Date().toISOString().split('T')[0],te=S.dH.find(d=>d.date===today),lbl=te?'💾 수정 저장':'💾 저장';const allD=S.dH.slice().reverse();let hist='';if(allD.length){hist='<div class="c"><h3>📖 전체 건강일기</h3>';allD.forEach(d=>{hist+=`<div style="padding:7px 0;border-bottom:1px solid #f0f4f0"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px"><span style="font-size:10px;font-weight:700;color:var(--g)">📅 ${d.date}</span><div style="display:flex;gap:3px"><button class="edit-btn" onclick="editD2('${d.date}')">✏️</button><button class="del-btn" onclick="delD2('${d.date}')">🗑️</button></div></div>`;if(d.symptoms&&d.symptoms.length)hist+=`<div style="margin-bottom:2px">${d.symptoms.map(s=>'<span class="badge" style="background:#FFF0F0;color:var(--coral)">'+s+'</span>').join('')}</div>`;hist+=`<p style="font-size:11px;line-height:1.4">${d.text||'(없음)'}</p></div>`;});hist+='</div>';}return`<div class="fd"><div class="c"><h3>🩺 증상 체크</h3><div class="sg">${sb}</div></div><div class="c"><h3>📝 오늘 몸 상태 일기</h3>${te?'<div class="tip" style="padding:5px 7px;margin-bottom:5px"><p style="font-size:9px;color:#4A6B4A">✅ 오늘 기록이 있습니다. 저장 시 수정됩니다.</p></div>':''}<textarea id="dI" placeholder="컨디션, 느낌, 특이사항...">${S.diary}</textarea><button class="btn bp" style="margin-top:6px" onclick="sD()">${lbl}</button></div>${hist}</div>`;}
+function sD(){const t=document.getElementById('dI')?.value||'';S.diary=t;const d=new Date().toISOString().split('T')[0],cs=SYM.filter((_,i)=>S.sym[i]),e={date:d,text:t,symptoms:cs};const ex=S.dH.findIndex(x=>x.date===d);if(ex>=0)S.dH[ex]=e;else S.dH.push(e);save();alert('저장 💚');ren();}
 
-return`<div class="fd">
-<div class="c"><h3>📊 오늘의 영양 현황</h3>
-<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;font-weight:600">🔥 열량</span><span style="font-size:11px;font-weight:700;color:#5B8C5A">${tc} / 2,000 kcal</span></div><div class="pg"><div class="pf" style="width:${cp}%;background:linear-gradient(90deg,#5B8C5A,#4ECDC4)"></div></div></div>
-<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;font-weight:600">💪 단백질</span><span style="font-size:11px;font-weight:700;color:#45B7D1">${tp} / 80 g</span></div><div class="pg"><div class="pf" style="width:${pp}%;background:linear-gradient(90deg,#45B7D1,#4ECDC4)"></div></div></div>
-<div><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;font-weight:600">💧 수분 섭취</span><span style="font-size:11px;font-weight:700;color:#45B7D1">${S.water} / 8 잔</span></div><div class="wr">${wb}</div></div></div>
+function rGuide(){let h='<div class="fd">';GS.forEach(s=>{h+=`<div class="section-title">${s.title}</div>`;s.items.forEach(i=>{h+=`<div class="guide-block"><h4>${i.subtitle}</h4><ul>${i.tips.map(t=>'<li>'+t+'</li>').join('')}</ul></div>`;});});h+=`<div class="section-title">💡 Q&A</div><div class="c">`;QNA.forEach(q=>{h+=`<div class="qa-item"><div class="qa-q">${q.q}</div><div class="qa-a">${q.a}</div></div>`;});h+=`</div><div class="section-title">⚠️ 주의 식품</div><div class="c">`;AVOID.forEach(a=>{h+=`<div class="ai"><div style="font-size:18px">${a.icon}</div><div><div style="font-size:11px;font-weight:700;color:#C0392B">${a.food}</div><div style="font-size:9px;color:#8B6914">${a.reason}</div></div></div>`;});h+=`</div><div class="section-title">✅ 권장 식품</div><div class="c">`;GOOD.forEach(g=>{h+=`<div class="gi"><div style="font-size:16px">${g.icon}</div><div><div style="font-size:11px;font-weight:600;color:#2D6A2E">${g.food}</div><div style="font-size:9px;color:var(--g)">${g.reason}</div></div></div>`;});h+=`</div></div>`;return h;}
 
-<div class="c"><h3>✏️ 직접 식사 기록하기</h3>
-<p style="font-size:10px;color:#8CA88C;margin-bottom:8px">레시피 외에 직접 드신 음식을 기록하세요</p>
-<div class="manual-row"><input type="text" id="mName" placeholder="음식 이름 (예: 수육)" value="${S.manualName||''}" oninput="S.manualName=this.value"></div>
-<div class="manual-row"><input type="number" class="sm" id="mCal" placeholder="칼로리" value="${S.manualCal||''}" oninput="S.manualCal=this.value"><input type="number" class="sm" id="mPro" placeholder="단백질(g)" value="${S.manualPro||''}" oninput="S.manualPro=this.value"><button class="btn bp" style="width:auto;padding:10px 14px;font-size:12px" onclick="addManual()">추가</button></div>
-<p style="font-size:9px;color:#8CA88C">* 칼로리·단백질을 모르시면 대략적으로 입력해도 됩니다</p>
-</div>
-
-<div class="c"><h3>🍽️ 오늘 식사 기록</h3>${ml}</div>
-${warn}
-${histHtml}
-<button class="btn bo" onclick="resetT()" style="font-size:11px;padding:9px">🔄 오늘 기록 초기화</button>
-</div>`;
-}
-
-function addManual(){
-const n=S.manualName||'';
-if(!n.trim()){alert('음식 이름을 입력해주세요');return;}
-const c=parseInt(S.manualCal)||0;
-const p=parseInt(S.manualPro)||0;
-const now=new Date();
-S.meals.push({name:n.trim(),cal:c,pro:p,time:now.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})});
-S.manualName='';S.manualCal='';S.manualPro='';
+function rShare(){return`<div class="fd"><div class="c"><h3>🔗 가족과 데이터 공유</h3><p style="font-size:11px;line-height:1.6;margin-bottom:10px">이 프로그램은 각자의 핸드폰에 데이터가 저장됩니다.<br>가족과 기록을 공유하려면 아래 방법을 사용하세요.</p><div style="font-size:12px;font-weight:700;margin-bottom:5px">📤 내보내기</div><p style="font-size:10px;color:var(--txl);margin-bottom:5px">버튼을 누르면 데이터가 복사됩니다. 카톡으로 보내세요.</p><button class="btn bp" style="margin-bottom:8px" onclick="expD()">📤 데이터 내보내기</button><textarea id="expA" style="min-height:50px;font-size:9px;display:none" readonly></textarea><div style="font-size:12px;font-weight:700;margin:12px 0 5px">📥 가져오기</div><p style="font-size:10px;color:var(--txl);margin-bottom:5px">가족이 보내준 데이터를 붙여넣기 하세요.</p><textarea id="impA" style="min-height:50px;font-size:9px" placeholder="데이터를 붙여넣기..."></textarea><button class="btn bo" style="margin-top:5px" onclick="impD()">📥 가져오기</button></div><div class="c"><h3>📱 홈화면 추가</h3><div style="font-size:11px;line-height:1.8"><b>아이폰:</b> Safari → 공유(□↑) → 홈 화면에 추가<br><b>갤럭시:</b> Chrome → ⋮ → 홈 화면에 추가</div></div><div class="c"><h3>🗑️ 데이터 관리</h3><button class="btn" style="background:#FFF0F0;color:var(--coral);font-size:11px;padding:8px" onclick="clrAll()">⚠️ 전체 초기화</button><p style="font-size:9px;color:var(--txl);margin-top:3px">되돌릴 수 없습니다</p></div></div>`;}
+function expD(){const d=JSON.stringify(S),el=document.getElementById('expA');el.style.display='block';el.value=d;el.select();try{navigator.clipboard.writeText(d);alert('복사 완료! 카톡에 붙여넣기 하세요.');}catch(e){alert('위 텍스트를 길게 눌러 복사하세요.');}}
+function impD(){const r=document.getElementById('impA')?.value;if(!r||!r.trim()){alert('데이터를 붙여넣기 해주세요');return;}try{const d=JSON.parse(r);if(confirm('현재 기록을 덮어쓰시겠습니까?')){Object.assign(S,d);S.recipe=null;save();alert('가져오기 완료 💚');ren();}}catch(e){alert('올바른 형식이 아닙니다.');}}
+function clrAll(){if(confirm('모든 데이터를 삭제하시겠습니까?')){localStorage.removeItem('isg2');location.reload();}}
 ren();
-}
-
-function editMeal(i){
-const m=S.meals[i];
-const newName=prompt('음식 이름을 수정하세요:',m.name);
-if(newName===null)return;
-const newCal=prompt('칼로리를 수정하세요:',m.cal);
-if(newCal===null)return;
-const newPro=prompt('단백질(g)을 수정하세요:',m.pro);
-if(newPro===null)return;
-S.meals[i]={name:newName.trim()||m.name,cal:parseInt(newCal)||0,pro:parseInt(newPro)||0,time:m.time};
-ren();
-}
-
-function delMeal(i){
-if(confirm(S.meals[i].name+' 기록을 삭제하시겠습니까?')){S.meals.splice(i,1);ren();}
-}
-
-function delPastMeal(date,idx){
-if(!S.mealHistory)return;
-const dayMeals=S.mealHistory.filter(m=>m.date===date);
-if(idx>=0&&idx<dayMeals.length){
-const target=dayMeals[idx];
-const gi=S.mealHistory.findIndex(m=>m===target);
-if(gi>=0){S.mealHistory.splice(gi,1);save();ren();}
-}
-}
-
-function saveMealsToHistory(){
-if(!S.meals.length)return;
-const today=new Date().toISOString().split('T')[0];
-if(!S.mealHistory)S.mealHistory=[];
-S.meals.forEach(m=>{S.mealHistory.push({...m,date:today});});
-}
-
-function resetT(){if(confirm('오늘의 식사 기록과 수분 섭취를 초기화하시겠습니까?\n(기록은 지난 식사 기록에 보관됩니다)')){saveMealsToHistory();S.meals=[];S.water=0;ren();}}
-
-function rHealth(){
-const sb=SYM.map((s,i)=>`<button class="sb ${S.sym[i]?'on':''}" onclick="S.sym[${i}]=!S.sym[${i}];ren()">${s}</button>`).join('');
-const wH=S.wH.slice(-7);
-const wMin=wH.length?Math.min(...wH.map(w=>w.kg))-2:55;
-const wMax=wH.length?Math.max(...wH.map(w=>w.kg))+2:75;
-const wR=wMax-wMin||1;
-const cb=wH.map((w,i)=>{const pct=((w.kg-wMin)/wR)*100;return`<div style="flex:1;text-align:center"><div class="wbar" style="height:${Math.max(pct,5)}%"></div><div class="wl">${w.kg}</div><div class="wl">${w.date.slice(5)}</div></div>`;}).join('');
-
-// Weight history with delete
-let wHistHtml='';
-if(S.wH.length){
-wHistHtml='<div style="margin-top:8px;max-height:120px;overflow-y:auto">';
-S.wH.slice().reverse().forEach((w,ri)=>{
-const oi=S.wH.length-1-ri;
-wHistHtml+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:1px solid #f5f5f5"><span style="font-size:10px;color:#8CA88C">${w.date}</span><span style="font-size:11px;font-weight:600">${w.kg}kg</span><div><button onclick="editWeight(${oi})" style="border:none;background:#E8F0E8;border-radius:5px;padding:2px 6px;font-size:9px;cursor:pointer;color:#5B8C5A;margin-right:3px">수정</button><button onclick="delWeight(${oi})" style="border:none;background:#FFF0F0;border-radius:5px;padding:2px 6px;font-size:9px;cursor:pointer;color:#FF6B6B">삭제</button></div></div>`;
-});
-wHistHtml+='</div>';
-}
-
-// Diary history with edit/delete
-const allDiary=S.dH.slice().reverse();
-let diaryHtml='';
-if(allDiary.length){
-diaryHtml='<div class="c"><h3>📖 전체 건강일기 기록</h3>';
-allDiary.forEach((d,ri)=>{
-const oi=S.dH.length-1-ri;
-diaryHtml+=`<div style="padding:10px 0;border-bottom:1px solid #f0f4f0">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
-<span style="font-size:11px;font-weight:700;color:#5B8C5A">📅 ${d.date}</span>
-<div style="display:flex;gap:4px">
-<button onclick="editDiary(${oi})" style="border:none;background:#E8F0E8;border-radius:6px;padding:3px 8px;font-size:10px;cursor:pointer;font-family:inherit;color:#5B8C5A">✏️ 수정</button>
-<button onclick="delDiary(${oi})" style="border:none;background:#FFF0F0;border-radius:6px;padding:3px 8px;font-size:10px;cursor:pointer;font-family:inherit;color:#FF6B6B">🗑️ 삭제</button>
-</div>
-</div>
-${d.symptoms&&d.symptoms.length?'<div style="margin-bottom:4px">'+d.symptoms.map(s=>'<span class="badge" style="background:#FFF0F0;color:#FF6B6B">'+s+'</span>').join('')+'</div>':''}
-<p style="font-size:12px;line-height:1.5;color:#4A6B4A">${d.text||'(기록 없음)'}</p>
-${d.weight?'<div style="font-size:10px;color:#5B8C5A;margin-top:3px">⚖️ 체중: '+d.weight+'kg</div>':''}
-</div>`;
-});
-diaryHtml+='</div>';
-}
-
-// Check if today already has entry
-const today=new Date().toISOString().split('T')[0];
-const todayEntry=S.dH.find(d=>d.date===today);
-const editLabel=todayEntry?'💾 오늘 건강일기 수정 저장':'💾 오늘 건강일기 저장';
-
-return`<div class="fd">
-<div class="c"><h3>⚖️ 체중 기록</h3>
-<div style="display:flex;gap:7px;margin-bottom:10px"><input type="number" id="wI" placeholder="체중 (kg)" step="0.1" value="${S.weight}" oninput="S.weight=this.value" style="flex:1"><button class="btn bp" style="width:auto;padding:10px 14px" onclick="sW()">기록</button></div>
-${wH.length?'<div class="wc">'+cb+'</div>':'<div class="es"><i>📈</i><p style="font-size:11px">체중을 기록하면 그래프가 나타납니다</p></div>'}
-${wHistHtml}</div>
-<div class="c"><h3>🩺 오늘의 증상 체크</h3><p style="font-size:10px;color:#8CA88C;margin-bottom:8px">해당하는 증상을 모두 선택하세요</p><div class="sg">${sb}</div></div>
-<div class="c"><h3>📝 오늘의 몸 상태 일기</h3>
-${todayEntry?'<div class="tip" style="padding:8px 10px;margin-bottom:8px"><p style="font-size:10px;color:#4A6B4A">✅ 오늘 이미 기록이 있습니다. 저장하시면 수정됩니다.</p></div>':''}
-<p style="font-size:10px;color:#8CA88C;margin-bottom:7px">오늘 컨디션, 느낌, 특이사항을 자유롭게 적어주세요</p><textarea id="dI" placeholder="예) 오늘은 어제보다 구역감이 덜했다. 아침에 미음을 먹으니 속이 편했다...">${S.diary}</textarea>
-<button class="btn bp" style="margin-top:8px" onclick="sD()">${editLabel}</button></div>
-${diaryHtml}
-</div>`;
-}
-
-function sW(){
-const w=parseFloat(S.weight);
-if(!w||w<20||w>200){alert('올바른 체중을 입력해주세요');return;}
-const today=new Date().toISOString().split('T')[0];
-const ex=S.wH.findIndex(h=>h.date===today);
-if(ex>=0)S.wH[ex].kg=w;else S.wH.push({date:today,kg:w});
-alert(w+'kg 기록되었습니다');ren();
-}
-
-function sD(){
-const text=document.getElementById('dI')?.value||'';
-S.diary=text;
-const today=new Date().toISOString().split('T')[0];
-const cs=SYM.filter((_,i)=>S.sym[i]);
-const entry={date:today,text,symptoms:cs,weight:S.weight||null};
-const ex=S.dH.findIndex(d=>d.date===today);
-if(ex>=0)S.dH[ex]=entry;else S.dH.push(entry);
-save();alert('오늘의 건강일기가 저장되었습니다 💚');ren();
-}
-
-function editDiary(idx){
-const d=S.dH[idx];
-const newText=prompt('일기 내용을 수정하세요:',d.text);
-if(newText===null)return;
-S.dH[idx].text=newText;
-save();ren();
-}
-
-function delDiary(idx){
-if(confirm(S.dH[idx].date+' 일기를 삭제하시겠습니까?')){
-S.dH.splice(idx,1);save();ren();
-}
-}
-
-function editWeight(idx){
-const w=S.wH[idx];
-const newW=prompt(w.date+' 체중을 수정하세요 (kg):',w.kg);
-if(newW===null)return;
-const parsed=parseFloat(newW);
-if(!parsed||parsed<20||parsed>200){alert('올바른 체중을 입력해주세요');return;}
-S.wH[idx].kg=parsed;save();ren();
-}
-
-function delWeight(idx){
-if(confirm(S.wH[idx].date+' 체중 기록을 삭제하시겠습니까?')){
-S.wH.splice(idx,1);save();ren();
-}
-}
-
-function rGuide(){
-let html='<div class="fd">';
-GUIDE_SECTIONS.forEach(sec=>{
-html+=`<div class="section-title">${sec.title}</div>`;
-sec.items.forEach(item=>{
-html+=`<div class="guide-block"><h4>${item.subtitle}</h4><ul>${item.tips.map(t=>'<li>'+t+'</li>').join('')}</ul></div>`;
-});
-});
-html+=`<div class="section-title">💡 팩트체크 Q&A</div><div class="c">`;
-QNA.forEach(q=>{
-html+=`<div class="qa-item"><div class="qa-q">${q.q}</div><div class="qa-a">${q.a}</div></div>`;
-});
-html+=`</div>`;
-html+=`<div class="tip w"><div style="font-size:12px;font-weight:700;margin-bottom:5px">🔑 가장 중요한 원칙</div><div style="font-size:12px;line-height:1.8;color:#6B5B00">건강한 영양상태를 유지하여 면역력을 높이는 것이 치료 중 가장 중요합니다. 입맛이 없으시더라도 <b>밥, 고기/생선, 채소를 골고루, 꾸준히</b> 드시는 것이 최고의 면역력 회복제입니다.</div></div>`;
-html+=`</div>`;
-return html;
-}
-
-function rAvoid(){
-const ah=AVOID.map(a=>`<div class="ai"><div style="font-size:22px">${a.icon}</div><div><div style="font-size:12px;font-weight:700;color:#C0392B">${a.food}</div><div style="font-size:10px;color:#8B6914;margin-top:1px">${a.reason}</div></div></div>`).join('');
-const gh=GOOD.map(g=>`<div class="gi"><div style="font-size:20px">${g.icon}</div><div><div style="font-size:12px;font-weight:600;color:#2D6A2E">${g.food}</div><div style="font-size:10px;color:#5B8C5A">${g.reason}</div></div></div>`).join('');
-return`<div class="fd">
-<div class="c"><h3>⚠️ 항암·방사선 치료 중 주의 식품</h3><p style="font-size:10px;color:#8CA88C;margin-bottom:8px">독소루비신+이포스파마이드 및 흉부 방사선 치료 기준</p>${ah}</div>
-<div class="c"><h3>✅ 적극 권장 식품</h3>${gh}</div>
-</div>`;
-}
-
-ren();
-</script>
-</body>
-</html>
+</script></body></html>
