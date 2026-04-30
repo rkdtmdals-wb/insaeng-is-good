@@ -16,72 +16,72 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{font-family:Pretendard,-apple-system,sans-serif;background:var(--bg);color:var(--tx);max-width:480px;margin:0 auto;min-height:100vh;overflow-x:hidden;padding-bottom:80px}
 .hd{padding:16px 16px 10px;text-align:center;background:linear-gradient(135deg,#5B8C5A 0%,#3a7d5c 50%,#4ECDC4 100%);color:#fff;position:sticky;top:0;z-index:100}
-.hd h1{font-size:17px;font-weight:800}
-.hd .sub{font-size:10px;opacity:.85;margin-top:1px}
-.hd .en{font-size:9px;opacity:.6;font-style:italic}
+.hd h1{font-size:20px;font-weight:800}
+.hd .sub{font-size:13px;opacity:.85;margin-top:1px}
+.hd .en{font-size:12px;opacity:.6;font-style:italic}
 .sync-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-left:5px;vertical-align:middle;animation:pulse 2s infinite}
 .sync-on{background:#7fff7f}
 .sync-off{background:#ff7f7f}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .tb{display:flex;gap:1px;padding:3px;background:#fff;position:sticky;top:52px;z-index:99;box-shadow:var(--sh);overflow-x:auto}
-.t{flex:none;width:calc(100%/6);text-align:center;padding:6px 2px;border:none;background:0;font-size:8px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--txl);border-radius:7px;transition:.2s;white-space:nowrap}
+.t{flex:none;width:calc(100%/6);text-align:center;padding:8px 3px;border:none;background:0;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--txl);border-radius:7px;transition:.2s;white-space:nowrap}
 .t.a{background:var(--g);color:#fff}
-.t i{font-size:14px;display:block;margin-bottom:1px}
+.t i{font-size:17px;display:block;margin-bottom:1px}
 .ct{padding:10px 12px}
 .c{background:#fff;border-radius:14px;padding:13px;margin-bottom:10px;box-shadow:var(--sh)}
-.c h3{font-size:13px;font-weight:700;margin-bottom:9px}
+.c h3{font-size:16px;font-weight:700;margin-bottom:9px}
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px}
 .cb{border:none;border-radius:11px;padding:10px 8px;text-align:left;cursor:pointer;font-family:inherit;transition:.2s;box-shadow:0 1px 4px rgba(0,0,0,.04)}
-.cb i{font-size:18px;display:block;margin-bottom:2px}
-.cb .l{font-size:10px;font-weight:700}
-.cb .d{font-size:8px;opacity:.8}
+.cb i{font-size:22px;display:block;margin-bottom:2px}
+.cb .l{font-size:13px;font-weight:700}
+.cb .d{font-size:11px;opacity:.8}
 .ri{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f0f4f0;cursor:pointer}
 .ri:last-child{border:none}
-.btn{border:none;border-radius:11px;padding:11px;width:100%;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:.2s}
+.btn{border:none;border-radius:11px;padding:11px;width:100%;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;transition:.2s}
 .btn:active{transform:scale(.97)}
 .bp{background:var(--g);color:#fff}
 .bo{background:0;border:2px solid var(--g);color:var(--g)}
 .cr{display:flex;align-items:center;gap:8px;padding:6px 0;cursor:pointer;user-select:none}
-.cc{width:20px;height:20px;border-radius:50%;border:2px solid #C8D6C8;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.2s;font-size:10px;color:transparent}
+.cc{width:20px;height:20px;border-radius:50%;border:2px solid #C8D6C8;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.2s;font-size:13px;color:transparent}
 .cc.on{background:var(--g);border-color:var(--g);color:#fff}
 .pg{width:100%;height:7px;background:#E8EDE8;border-radius:4px;overflow:hidden}
 .pf{height:100%;border-radius:4px;transition:width .5s}
 .wr{display:flex;gap:4px;flex-wrap:wrap}
-.wb{width:34px;height:34px;border-radius:50%;border:2px solid var(--blue);background:0;font-size:12px;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
+.wb{width:34px;height:34px;border-radius:50%;border:2px solid var(--blue);background:0;font-size:15px;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
 .wb.on{background:var(--blue);border-color:var(--blue)}
 .ai{display:flex;align-items:center;gap:9px;padding:9px;background:#FFF5F5;border-radius:9px;margin-bottom:5px;border-left:3px solid var(--coral)}
 .gi{display:flex;align-items:center;gap:9px;padding:6px 0;border-bottom:1px solid #f0f4f0}
 .gi:last-child{border:none}
-textarea,input[type=text],input[type=number],input[type=date]{width:100%;border:1.5px solid #dde5dd;border-radius:9px;padding:9px;font-family:inherit;font-size:12px;outline:none;transition:.2s}
-textarea{resize:vertical;min-height:80px}
+textarea,input[type=text],input[type=number],input[type=date]{width:100%;border:1.5px solid #dde5dd;border-radius:9px;padding:9px;font-family:inherit;font-size:15px;outline:none;transition:.2s}
+textarea{resize:vertical;min-height:100px}
 textarea:focus,input:focus{border-color:var(--g)}
 .sg{display:grid;grid-template-columns:1fr 1fr;gap:4px}
-.sb{border:2px solid #dde5dd;border-radius:9px;padding:8px 6px;text-align:center;cursor:pointer;font-family:inherit;font-size:10px;font-weight:600;background:#fff;transition:.2s}
+.sb{border:2px solid #dde5dd;border-radius:9px;padding:8px 6px;text-align:center;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;background:#fff;transition:.2s}
 .sb.on{border-color:var(--coral);background:#FFF0F0;color:var(--coral)}
 .tip{background:#F0F7F0;border-radius:11px;padding:12px;border:1px solid #D4E8D4;margin-bottom:9px}
 .tip.w{background:#FFF8E1;border-color:#F7DC6F}
 .tip.r{background:#FFF5F5;border-color:#FFB3B3}
-.bk{background:0;border:none;font-size:12px;color:var(--g);font-weight:600;cursor:pointer;font-family:inherit;margin-bottom:7px}
-.sn{width:20px;height:20px;border-radius:50%;background:var(--g);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bk{background:0;border:none;font-size:15px;color:var(--g);font-weight:600;cursor:pointer;font-family:inherit;margin-bottom:7px}
+.sn{width:20px;height:20px;border-radius:50%;background:var(--g);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .fd{animation:fi .25s ease}
 @keyframes fi{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
-.dp{display:inline-block;padding:5px 10px;border-radius:16px;font-size:10px;font-weight:600;cursor:pointer;border:none;font-family:inherit;margin:0 2px 4px 0;transition:.2s}
+.dp{display:inline-block;padding:5px 10px;border-radius:16px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:inherit;margin:0 2px 4px 0;transition:.2s}
 .ml{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f0f4f0;align-items:center}
 .ml:last-child{border:none}
 .es{text-align:center;padding:18px 0;color:var(--txl)}
-.es i{font-size:26px;display:block;margin-bottom:4px}
-.badge{display:inline-block;padding:2px 6px;border-radius:7px;font-size:8px;font-weight:600;margin:1px 2px}
+.es i{font-size:30px;display:block;margin-bottom:4px}
+.badge{display:inline-block;padding:2px 6px;border-radius:7px;font-size:11px;font-weight:600;margin:1px 2px}
 .manual-row{display:flex;gap:5px;margin-bottom:7px}
 .manual-row input{flex:1}
 .manual-row input.sm{max-width:65px}
-.edit-btn{border:none;background:#E8F0E8;border-radius:5px;padding:3px 7px;font-size:9px;cursor:pointer;font-family:inherit;color:var(--g)}
-.del-btn{border:none;background:#FFF0F0;border-radius:5px;padding:3px 7px;font-size:9px;cursor:pointer;font-family:inherit;color:var(--coral)}
+.edit-btn{border:none;background:#E8F0E8;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer;font-family:inherit;color:var(--g)}
+.del-btn{border:none;background:#FFF0F0;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer;font-family:inherit;color:var(--coral)}
 .cal-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.cal-nav button{border:none;background:var(--gl);border-radius:8px;padding:6px 12px;font-size:13px;cursor:pointer;font-family:inherit;color:var(--g);font-weight:700}
-.cal-nav span{font-size:14px;font-weight:700}
+.cal-nav button{border:none;background:var(--gl);border-radius:8px;padding:6px 12px;font-size:16px;cursor:pointer;font-family:inherit;color:var(--g);font-weight:700}
+.cal-nav span{font-size:17px;font-weight:700}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
-.cal-hd{font-size:9px;font-weight:600;color:var(--txl);padding:4px 0}
-.cal-day{font-size:11px;padding:6px 2px;border-radius:8px;cursor:pointer;transition:.2s;min-height:36px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+.cal-hd{font-size:12px;font-weight:600;color:var(--txl);padding:4px 0}
+.cal-day{font-size:14px;padding:8px 3px;border-radius:8px;cursor:pointer;transition:.2s;min-height:40px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
 .cal-day:hover{background:var(--gl)}
 .cal-day.today{background:var(--g);color:#fff;font-weight:700}
 .cal-day.has-data{font-weight:700}
@@ -91,25 +91,25 @@ textarea:focus,input:focus{border-color:var(--g)}
 .cal-day.empty{cursor:default}
 .cal-day.sun{color:var(--coral)}
 .cal-day.sat{color:var(--blue)}
-.chemo-badge{display:inline-block;background:linear-gradient(135deg,var(--g),var(--teal));color:#fff;border-radius:10px;padding:4px 12px;font-size:12px;font-weight:700;margin-bottom:8px}
+.chemo-badge{display:inline-block;background:linear-gradient(135deg,var(--g),var(--teal));color:#fff;border-radius:10px;padding:4px 12px;font-size:15px;font-weight:700;margin-bottom:8px}
 .vital-row{display:flex;gap:5px;margin-bottom:6px;align-items:center}
-.vital-row label{font-size:11px;font-weight:600;min-width:40px;flex-shrink:0}
-.vital-row input{flex:1;padding:7px;font-size:12px}
+.vital-row label{font-size:14px;font-weight:600;min-width:40px;flex-shrink:0}
+.vital-row input{flex:1;padding:7px;font-size:15px}
 .record-card{background:#FAFCFA;border-radius:10px;padding:10px;margin-bottom:8px;border:1px solid #E8EDE8}
 .guide-block{background:#fff;border-radius:11px;padding:13px;margin-bottom:9px;box-shadow:var(--sh)}
-.guide-block h4{font-size:12px;font-weight:700;margin-bottom:7px}
-.guide-block li{font-size:11px;line-height:1.7;margin-bottom:2px;list-style:none;padding-left:13px;position:relative}
+.guide-block h4{font-size:15px;font-weight:700;margin-bottom:7px}
+.guide-block li{font-size:14px;line-height:1.7;margin-bottom:2px;list-style:none;padding-left:13px;position:relative}
 .guide-block li::before{content:'•';position:absolute;left:0;color:var(--g)}
 .qa-item{padding:10px 0;border-bottom:1px solid #f0f4f0}
 .qa-item:last-child{border:none}
-.qa-q{font-size:12px;font-weight:700;color:var(--g);margin-bottom:4px}
-.qa-a{font-size:11px;line-height:1.7;color:#4A6B4A}
-.section-title{font-size:14px;font-weight:800;margin:14px 0 7px;color:var(--gd)}
+.qa-q{font-size:15px;font-weight:700;color:var(--g);margin-bottom:4px}
+.qa-a{font-size:14px;line-height:1.7;color:#4A6B4A}
+.section-title{font-size:17px;font-weight:800;margin:14px 0 7px;color:var(--gd)}
 </style>
 </head>
 <body>
 <div class="hd">
-<div style="font-size:24px">🌿</div>
+<div style="font-size:28px">🌿</div>
 <h1>인생 이즈 굿 <span class="sync-dot sync-off" id="syncDot"></span></h1>
 <div class="sub">아버님을 위한 항암 영양케어 프로그램</div>
 <div class="en">In-saeng is Good · 실시간 가족 연동</div>
@@ -206,11 +206,11 @@ if(S.chemoInfo&&S.chemoInfo.cycle&&S.chemoInfo.startDate){const diff=Math.floor(
 else if(S.chemoInfo&&S.chemoInfo.cycle)chemoHtml=`<div class="chemo-badge">💉 ${S.chemoInfo.cycle}차 항암</div>`;
 
 let det=`<div class="c"><h3>📋 ${sd}</h3>${chemoHtml}`;
-if(v.bp||v.temp||v.weight){det+=`<div class="record-card">`;if(v.bp)det+=`<div style="font-size:12px;margin-bottom:3px">🩸 혈압: <b>${v.bp}</b></div>`;if(v.temp)det+=`<div style="font-size:12px;margin-bottom:3px">🌡️ 체온: <b>${v.temp}°C</b></div>`;if(v.weight)det+=`<div style="font-size:12px">⚖️ 체중: <b>${v.weight}kg</b></div>`;det+=`<div style="display:flex;gap:4px;margin-top:6px"><button class="edit-btn" onclick="editV('${sd}')">✏️수정</button><button class="del-btn" onclick="delV('${sd}')">🗑️삭제</button></div></div>`;}else det+=`<p style="font-size:11px;color:var(--txl)">바이탈 기록 없음</p>`;
-if(diary){det+=`<div class="record-card" style="margin-top:6px"><div style="font-size:11px;font-weight:600;margin-bottom:3px">📝 일기</div>`;if(diary.symptoms&&diary.symptoms.length)det+=`<div style="margin-bottom:3px">${diary.symptoms.map(s=>'<span class="badge" style="background:#FFF0F0;color:var(--coral)">'+s+'</span>').join('')}</div>`;det+=`<p style="font-size:11px;line-height:1.4">${diary.text||'(없음)'}</p><div style="display:flex;gap:4px;margin-top:6px"><button class="edit-btn" onclick="editD2('${sd}')">✏️수정</button><button class="del-btn" onclick="delD2('${sd}')">🗑️삭제</button></div></div>`;}
+if(v.bp||v.temp||v.weight){det+=`<div class="record-card">`;if(v.bp)det+=`<div style="font-size:15px;margin-bottom:3px">🩸 혈압: <b>${v.bp}</b></div>`;if(v.temp)det+=`<div style="font-size:15px;margin-bottom:3px">🌡️ 체온: <b>${v.temp}°C</b></div>`;if(v.weight)det+=`<div style="font-size:15px">⚖️ 체중: <b>${v.weight}kg</b></div>`;det+=`<div style="display:flex;gap:4px;margin-top:6px"><button class="edit-btn" onclick="editV('${sd}')">✏️수정</button><button class="del-btn" onclick="delV('${sd}')">🗑️삭제</button></div></div>`;}else det+=`<p style="font-size:14px;color:var(--txl)">바이탈 기록 없음</p>`;
+if(diary){det+=`<div class="record-card" style="margin-top:6px"><div style="font-size:14px;font-weight:600;margin-bottom:3px">📝 일기</div>`;if(diary.symptoms&&diary.symptoms.length)det+=`<div style="margin-bottom:3px">${diary.symptoms.map(s=>'<span class="badge" style="background:#FFF0F0;color:var(--coral)">'+s+'</span>').join('')}</div>`;det+=`<p style="font-size:14px;line-height:1.6">${diary.text||'(없음)'}</p><div style="display:flex;gap:4px;margin-top:6px"><button class="edit-btn" onclick="editD2('${sd}')">✏️수정</button><button class="del-btn" onclick="delD2('${sd}')">🗑️삭제</button></div></div>`;}
 det+=`</div>`;
 
-let inp=`<div class="c"><h3>✏️ 기록 입력</h3><div style="margin-bottom:8px"><div style="font-size:11px;font-weight:600;margin-bottom:4px">💉 항암 차수</div><div class="vital-row"><label>차수</label><input type="text" placeholder="예:4" value="${(S.chemoInfo&&S.chemoInfo.cycle)||''}" oninput="S.chemoInfo.cycle=this.value;save()"></div><div class="vital-row"><label>시작일</label><input type="date" value="${(S.chemoInfo&&S.chemoInfo.startDate)||''}" oninput="S.chemoInfo.startDate=this.value;save()"></div></div><div style="font-size:11px;font-weight:600;margin-bottom:4px">🩺 바이탈</div><div class="vital-row"><label>🩸혈압</label><input type="text" id="vBp" placeholder="120/80" value="${v.bp||''}"></div><div class="vital-row"><label>🌡️체온</label><input type="number" id="vTp" placeholder="36.5" step="0.1" value="${v.temp||''}"></div><div class="vital-row"><label>⚖️체중</label><input type="number" id="vWt" placeholder="kg" step="0.1" value="${v.weight||''}"></div><button class="btn bp" style="margin-top:5px" onclick="saveV('${sd}')">💾 저장</button></div>`;
+let inp=`<div class="c"><h3>✏️ 기록 입력</h3><div style="margin-bottom:8px"><div style="font-size:14px;font-weight:600;margin-bottom:4px">💉 항암 차수</div><div class="vital-row"><label>차수</label><input type="text" placeholder="예:4" value="${(S.chemoInfo&&S.chemoInfo.cycle)||''}" oninput="S.chemoInfo.cycle=this.value;save()"></div><div class="vital-row"><label>시작일</label><input type="date" value="${(S.chemoInfo&&S.chemoInfo.startDate)||''}" oninput="S.chemoInfo.startDate=this.value;save()"></div></div><div style="font-size:14px;font-weight:600;margin-bottom:4px">🩺 바이탈</div><div class="vital-row"><label>🩸혈압</label><input type="text" id="vBp" placeholder="120/80" value="${v.bp||''}"></div><div class="vital-row"><label>🌡️체온</label><input type="number" id="vTp" placeholder="36.5" step="0.1" value="${v.temp||''}"></div><div class="vital-row"><label>⚖️체중</label><input type="number" id="vWt" placeholder="kg" step="0.1" value="${v.weight||''}"></div><button class="btn bp" style="margin-top:5px" onclick="saveV('${sd}')">💾 저장</button></div>`;
 return`<div class="fd"><div class="c"><div class="cal-nav"><button onclick="pM()">◀</button><span>${y}년 ${mN[m]}</span><button onclick="nM()">▶</button></div><div class="cal-grid">${cells}</div></div>${det}${inp}</div>`;}
 function selDay(d){S.selDate=d;ren();}
 function pM(){S.calMonth--;if(S.calMonth<0){S.calMonth=11;S.calYear--;}ren();}
@@ -222,29 +222,29 @@ function editD2(d){const i=S.dH.findIndex(x=>x.date===d);if(i<0)return;const t=p
 function delD2(d){if(confirm('일기 삭제?')){S.dH=S.dH.filter(x=>x.date!==d);save();ren();}}
 
 // === RECIPES ===
-function rList(){const ch=CATS.map(c=>{const ac=S.cat===c.id;return`<button class="cb" style="background:${ac?c.color:'#fff'};color:${ac?'#fff':'#2D3A2D'}" onclick="S.cat='${c.id}';ren()"><i>${c.emoji}</i><div class="l">${c.label}</div><div class="d">${c.desc}</div></button>`;}).join('');const rs=R[S.cat]||[];return`<div class="fd"><div class="cg">${ch}</div><div class="c"><h3>📋 ${CATS.find(c=>c.id===S.cat).label} (${rs.length}개)</h3>${rs.map((r,i)=>`<div class="ri" onclick="oR('${S.cat}',${i})"><div><div style="font-size:12px;font-weight:600">${r.emoji} ${r.name}</div><div style="font-size:9px;color:var(--txl)">⏱${r.time} 🔥${r.cal}kcal 💪${r.pro}g</div></div><span style="color:#ccc">›</span></div>`).join('')}</div></div>`;}
+function rList(){const ch=CATS.map(c=>{const ac=S.cat===c.id;return`<button class="cb" style="background:${ac?c.color:'#fff'};color:${ac?'#fff':'#2D3A2D'}" onclick="S.cat='${c.id}';ren()"><i>${c.emoji}</i><div class="l">${c.label}</div><div class="d">${c.desc}</div></button>`;}).join('');const rs=R[S.cat]||[];return`<div class="fd"><div class="cg">${ch}</div><div class="c"><h3>📋 ${CATS.find(c=>c.id===S.cat).label} (${rs.length}개)</h3>${rs.map((r,i)=>`<div class="ri" onclick="oR('${S.cat}',${i})"><div><div style="font-size:15px;font-weight:600">${r.emoji} ${r.name}</div><div style="font-size:12px;color:var(--txl)">⏱${r.time} 🔥${r.cal}kcal 💪${r.pro}g</div></div><span style="color:#ccc">›</span></div>`).join('')}</div></div>`;}
 function oR(c,i){S.recipe={cat:c,idx:i};S.cIng={};ren();}
-function rDet(){const r=R[S.recipe.cat][S.recipe.idx];const lg=S.meals&&S.meals.some(m=>m.name===r.name);return`<div class="fd"><button class="bk" onclick="S.recipe=null;ren()">← 목록</button><div class="c"><div style="text-align:center;padding:8px 0"><div style="font-size:36px">${r.emoji}</div><h2 style="font-size:15px;font-weight:800;margin-top:4px">${r.name}</h2><p style="font-size:10px;color:var(--txl)">${r.desc}</p><div style="display:flex;justify-content:center;gap:18px;margin-top:8px"><div style="text-align:center"><span style="font-size:15px;font-weight:700;color:var(--g)">${r.cal}</span><div style="font-size:8px;color:var(--txl)">kcal</div></div><div style="text-align:center"><span style="font-size:15px;font-weight:700;color:var(--blue)">${r.pro}g</span><div style="font-size:8px;color:var(--txl)">단백질</div></div></div></div></div><div class="c"><h3>🥗 재료</h3>${r.ing.map((g,i)=>`<div class="cr" onclick="tI(${i})"><div class="cc ${S.cIng[i]?'on':''}">✓</div><span style="${S.cIng[i]?'text-decoration:line-through;color:#8CA88C':''}">${g}</span></div>`).join('')}</div><div class="c"><h3>👨‍🍳 만드는 법</h3>${r.steps.map((s,i)=>`<div style="display:flex;gap:8px;margin-bottom:6px"><div class="sn">${i+1}</div><p style="font-size:11px;line-height:1.5">${s}</p></div>`).join('')}</div><div class="tip"><p style="font-size:11px">💡 ${r.tip}</p></div><button class="btn bp" onclick="lM('${r.name}',${r.cal},${r.pro})" ${lg?'disabled style="opacity:.6"':''}>${lg?'✓ 기록됨':'✅ 식사 기록'}</button></div>`;}
+function rDet(){const r=R[S.recipe.cat][S.recipe.idx];const lg=S.meals&&S.meals.some(m=>m.name===r.name);return`<div class="fd"><button class="bk" onclick="S.recipe=null;ren()">← 목록</button><div class="c"><div style="text-align:center;padding:8px 0"><div style="font-size:40px">${r.emoji}</div><h2 style="font-size:18px;font-weight:800;margin-top:4px">${r.name}</h2><p style="font-size:13px;color:var(--txl)">${r.desc}</p><div style="display:flex;justify-content:center;gap:18px;margin-top:8px"><div style="text-align:center"><span style="font-size:18px;font-weight:700;color:var(--g)">${r.cal}</span><div style="font-size:11px;color:var(--txl)">kcal</div></div><div style="text-align:center"><span style="font-size:18px;font-weight:700;color:var(--blue)">${r.pro}g</span><div style="font-size:11px;color:var(--txl)">단백질</div></div></div></div></div><div class="c"><h3>🥗 재료</h3>${r.ing.map((g,i)=>`<div class="cr" onclick="tI(${i})"><div class="cc ${S.cIng[i]?'on':''}">✓</div><span style="${S.cIng[i]?'text-decoration:line-through;color:#8CA88C':''}">${g}</span></div>`).join('')}</div><div class="c"><h3>👨‍🍳 만드는 법</h3>${r.steps.map((s,i)=>`<div style="display:flex;gap:8px;margin-bottom:6px"><div class="sn">${i+1}</div><p style="font-size:14px;line-height:1.7">${s}</p></div>`).join('')}</div><div class="tip"><p style="font-size:14px">💡 ${r.tip}</p></div><button class="btn bp" onclick="lM('${r.name}',${r.cal},${r.pro})" ${lg?'disabled style="opacity:.6"':''}>${lg?'✓ 기록됨':'✅ 식사 기록'}</button></div>`;}
 function tI(i){S.cIng[i]=!S.cIng[i];ren();}
 function lM(n,c,p){if(!S.meals)S.meals=[];S.meals.push({name:n,cal:c,pro:p,time:new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})});save();ren();}
 
 // === DAILY ===
-function rDaily(){const tip=DT[S.dailyIdx];return`<div class="fd"><div style="overflow-x:auto;white-space:nowrap;margin-bottom:8px">${DT.map((t,i)=>`<button class="dp" style="background:${S.dailyIdx===i?'var(--g)':'#fff'};color:${S.dailyIdx===i?'#fff':'var(--tx)'}" onclick="S.dailyIdx=${i};ren()">${t.icon} ${t.day}</button>`).join('')}</div><div class="c"><div style="text-align:center;margin-bottom:8px"><div style="font-size:30px">${tip.icon}</div><h3 style="font-size:15px;font-weight:800;margin-top:3px">${tip.day}</h3></div>${tip.tips.map(t=>`<div style="display:flex;gap:6px;padding:4px 0"><div style="width:5px;height:5px;border-radius:50%;background:var(--g);margin-top:5px;flex-shrink:0"></div><p style="font-size:11px;line-height:1.5">${t}</p></div>`).join('')}</div><div class="tip w"><div style="font-size:10px;line-height:1.7;color:#6B5B00">📌 하루: <b>1,800~2,200kcal</b>, 단백질 <b>70~90g</b> · <b>6회 소량씩</b> · 수분 <b>1.5~2L</b></div></div></div>`;}
+function rDaily(){const tip=DT[S.dailyIdx];return`<div class="fd"><div style="overflow-x:auto;white-space:nowrap;margin-bottom:8px">${DT.map((t,i)=>`<button class="dp" style="background:${S.dailyIdx===i?'var(--g)':'#fff'};color:${S.dailyIdx===i?'#fff':'var(--tx)'}" onclick="S.dailyIdx=${i};ren()">${t.icon} ${t.day}</button>`).join('')}</div><div class="c"><div style="text-align:center;margin-bottom:8px"><div style="font-size:34px">${tip.icon}</div><h3 style="font-size:18px;font-weight:800;margin-top:3px">${tip.day}</h3></div>${tip.tips.map(t=>`<div style="display:flex;gap:6px;padding:4px 0"><div style="width:5px;height:5px;border-radius:50%;background:var(--g);margin-top:5px;flex-shrink:0"></div><p style="font-size:14px;line-height:1.7">${t}</p></div>`).join('')}</div><div class="tip w"><div style="font-size:13px;line-height:1.7;color:#6B5B00">📌 하루: <b>1,800~2,200kcal</b>, 단백질 <b>70~90g</b> · <b>6회 소량씩</b> · 수분 <b>1.5~2L</b></div></div></div>`;}
 
 // === TRACKER ===
-function rTracker(){const ms=S.meals||[],tc=ms.reduce((s,m)=>s+m.cal,0),tp=ms.reduce((s,m)=>s+m.pro,0);const wb=Array.from({length:8}).map((_,i)=>`<button class="wb ${i<S.water?'on':''}" onclick="S.water=${i<S.water?i:i+1};save();ren()">${i<S.water?'💧':'○'}</button>`).join('');const ml=ms.length?ms.map((m,i)=>`<div class="ml"><div style="flex:1"><div style="font-size:11px;font-weight:600">${m.name}</div><div style="font-size:8px;color:var(--txl)">${m.time}</div></div><div style="text-align:right;margin-right:5px"><span style="font-size:10px;color:var(--g)">${m.cal}kcal</span></div><div style="display:flex;gap:3px"><button class="edit-btn" onclick="eMl(${i})">✏️</button><button class="del-btn" onclick="dMl(${i})">🗑️</button></div></div>`).join(''):'<div class="es"><i>🍴</i><p style="font-size:10px">식사를 기록해보세요</p></div>';return`<div class="fd"><div class="c"><h3>📊 오늘</h3><div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:10px;font-weight:600">🔥 열량</span><span style="font-size:10px;font-weight:700;color:var(--g)">${tc}/2,000kcal</span></div><div class="pg"><div class="pf" style="width:${Math.min(tc/2000*100,100)}%;background:linear-gradient(90deg,var(--g),var(--teal))"></div></div></div><div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:10px;font-weight:600">💪 단백질</span><span style="font-size:10px;font-weight:700;color:var(--blue)">${tp}/80g</span></div><div class="pg"><div class="pf" style="width:${Math.min(tp/80*100,100)}%;background:linear-gradient(90deg,var(--blue),var(--teal))"></div></div></div><div><div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:10px;font-weight:600">💧 수분</span><span style="font-size:10px;font-weight:700;color:var(--blue)">${S.water}/8잔</span></div><div class="wr">${wb}</div></div></div><div class="c"><h3>✏️ 직접 기록</h3><div class="manual-row"><input type="text" id="mN" placeholder="음식 이름" value="${S.manualName||''}" oninput="S.manualName=this.value"></div><div class="manual-row"><input type="number" class="sm" id="mC" placeholder="칼로리" value="${S.manualCal||''}" oninput="S.manualCal=this.value"><input type="number" class="sm" id="mP" placeholder="단백질g" value="${S.manualPro||''}" oninput="S.manualPro=this.value"><button class="btn bp" style="width:auto;padding:8px 12px;font-size:11px" onclick="aM()">추가</button></div></div><div class="c"><h3>🍽️ 오늘 식사</h3>${ml}</div>${tc>0&&tc<1500?'<div class="tip r"><p style="font-size:10px;color:#C0392B;font-weight:600">⚠️ 열량 부족</p></div>':''}<button class="btn bo" onclick="rsT()" style="font-size:10px;padding:8px">🔄 초기화</button></div>`;}
+function rTracker(){const ms=S.meals||[],tc=ms.reduce((s,m)=>s+m.cal,0),tp=ms.reduce((s,m)=>s+m.pro,0);const wb=Array.from({length:8}).map((_,i)=>`<button class="wb ${i<S.water?'on':''}" onclick="S.water=${i<S.water?i:i+1};save();ren()">${i<S.water?'💧':'○'}</button>`).join('');const ml=ms.length?ms.map((m,i)=>`<div class="ml"><div style="flex:1"><div style="font-size:14px;font-weight:600">${m.name}</div><div style="font-size:11px;color:var(--txl)">${m.time}</div></div><div style="text-align:right;margin-right:5px"><span style="font-size:13px;color:var(--g)">${m.cal}kcal</span></div><div style="display:flex;gap:3px"><button class="edit-btn" onclick="eMl(${i})">✏️</button><button class="del-btn" onclick="dMl(${i})">🗑️</button></div></div>`).join(''):'<div class="es"><i>🍴</i><p style="font-size:13px">식사를 기록해보세요</p></div>';return`<div class="fd"><div class="c"><h3>📊 오늘</h3><div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:13px;font-weight:600">🔥 열량</span><span style="font-size:13px;font-weight:700;color:var(--g)">${tc}/2,000kcal</span></div><div class="pg"><div class="pf" style="width:${Math.min(tc/2000*100,100)}%;background:linear-gradient(90deg,var(--g),var(--teal))"></div></div></div><div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:13px;font-weight:600">💪 단백질</span><span style="font-size:13px;font-weight:700;color:var(--blue)">${tp}/80g</span></div><div class="pg"><div class="pf" style="width:${Math.min(tp/80*100,100)}%;background:linear-gradient(90deg,var(--blue),var(--teal))"></div></div></div><div><div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:13px;font-weight:600">💧 수분</span><span style="font-size:13px;font-weight:700;color:var(--blue)">${S.water}/8잔</span></div><div class="wr">${wb}</div></div></div><div class="c"><h3>✏️ 직접 기록</h3><div class="manual-row"><input type="text" id="mN" placeholder="음식 이름" value="${S.manualName||''}" oninput="S.manualName=this.value"></div><div class="manual-row"><input type="number" class="sm" id="mC" placeholder="칼로리" value="${S.manualCal||''}" oninput="S.manualCal=this.value"><input type="number" class="sm" id="mP" placeholder="단백질g" value="${S.manualPro||''}" oninput="S.manualPro=this.value"><button class="btn bp" style="width:auto;padding:8px 12px;font-size:14px" onclick="aM()">추가</button></div></div><div class="c"><h3>🍽️ 오늘 식사</h3>${ml}</div>${tc>0&&tc<1500?'<div class="tip r"><p style="font-size:13px;color:#C0392B;font-weight:600">⚠️ 열량 부족</p></div>':''}<button class="btn bo" onclick="rsT()" style="font-size:13px;padding:8px">🔄 초기화</button></div>`;}
 function aM(){const n=S.manualName||'';if(!n.trim()){alert('음식 이름을 입력해주세요');return;}if(!S.meals)S.meals=[];S.meals.push({name:n.trim(),cal:parseInt(S.manualCal)||0,pro:parseInt(S.manualPro)||0,time:new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})});S.manualName='';S.manualCal='';S.manualPro='';save();ren();}
 function eMl(i){const m=S.meals[i];const n=prompt('음식:',m.name);if(n===null)return;const c=prompt('칼로리:',m.cal);if(c===null)return;S.meals[i]={name:n||m.name,cal:parseInt(c)||0,pro:m.pro,time:m.time};save();ren();}
 function dMl(i){if(confirm('삭제?')){S.meals.splice(i,1);save();ren();}}
 function rsT(){if(confirm('초기화?')){S.meals=[];S.water=0;save();ren();}}
 
 // === HEALTH ===
-function rHealth(){const today=new Date().toISOString().split('T')[0],dhs=S.dH||[],te=dhs.find(d=>d.date===today);const allD=dhs.slice().reverse();let hist='';if(allD.length){hist='<div class="c"><h3>📖 전체 일기</h3>';allD.forEach(d=>{hist+=`<div style="padding:7px 0;border-bottom:1px solid #f0f4f0"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px"><span style="font-size:10px;font-weight:700;color:var(--g)">📅 ${d.date}</span><div style="display:flex;gap:3px"><button class="edit-btn" onclick="editD2('${d.date}')">✏️</button><button class="del-btn" onclick="delD2('${d.date}')">🗑️</button></div></div>`;if(d.symptoms&&d.symptoms.length)hist+=`<div style="margin-bottom:2px">${d.symptoms.map(s=>'<span class="badge" style="background:#FFF0F0;color:var(--coral)">'+s+'</span>').join('')}</div>`;hist+=`<p style="font-size:11px;line-height:1.4">${d.text||'(없음)'}</p></div>`;});hist+='</div>';}
-return`<div class="fd"><div class="c"><h3>🩺 증상 체크</h3><div class="sg">${SYM.map((s,i)=>`<button class="sb ${S.sym[i]?'on':''}" onclick="S.sym[${i}]=!S.sym[${i}];ren()">${s}</button>`).join('')}</div></div><div class="c"><h3>📝 오늘 몸 상태</h3>${te?'<div class="tip" style="padding:5px 7px;margin-bottom:5px"><p style="font-size:9px;color:#4A6B4A">✅ 오늘 기록 있음. 저장 시 수정.</p></div>':''}<textarea id="dI" placeholder="컨디션, 느낌...">${S.diary}</textarea><button class="btn bp" style="margin-top:6px" onclick="sD()">${te?'💾 수정 저장':'💾 저장'}</button></div>${hist}</div>`;}
+function rHealth(){const today=new Date().toISOString().split('T')[0],dhs=S.dH||[],te=dhs.find(d=>d.date===today);const allD=dhs.slice().reverse();let hist='';if(allD.length){hist='<div class="c"><h3>📖 전체 일기</h3>';allD.forEach(d=>{hist+=`<div style="padding:7px 0;border-bottom:1px solid #f0f4f0"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px"><span style="font-size:13px;font-weight:700;color:var(--g)">📅 ${d.date}</span><div style="display:flex;gap:3px"><button class="edit-btn" onclick="editD2('${d.date}')">✏️</button><button class="del-btn" onclick="delD2('${d.date}')">🗑️</button></div></div>`;if(d.symptoms&&d.symptoms.length)hist+=`<div style="margin-bottom:2px">${d.symptoms.map(s=>'<span class="badge" style="background:#FFF0F0;color:var(--coral)">'+s+'</span>').join('')}</div>`;hist+=`<p style="font-size:14px;line-height:1.6">${d.text||'(없음)'}</p></div>`;});hist+='</div>';}
+return`<div class="fd"><div class="c"><h3>🩺 증상 체크</h3><div class="sg">${SYM.map((s,i)=>`<button class="sb ${S.sym[i]?'on':''}" onclick="S.sym[${i}]=!S.sym[${i}];ren()">${s}</button>`).join('')}</div></div><div class="c"><h3>📝 오늘 몸 상태</h3>${te?'<div class="tip" style="padding:5px 7px;margin-bottom:5px"><p style="font-size:12px;color:#4A6B4A">✅ 오늘 기록 있음. 저장 시 수정.</p></div>':''}<textarea id="dI" placeholder="컨디션, 느낌...">${S.diary}</textarea><button class="btn bp" style="margin-top:6px" onclick="sD()">${te?'💾 수정 저장':'💾 저장'}</button></div>${hist}</div>`;}
 function sD(){const t=document.getElementById('dI')?.value||'';S.diary=t;const d=new Date().toISOString().split('T')[0],cs=SYM.filter((_,i)=>S.sym[i]),e={date:d,text:t,symptoms:cs};if(!S.dH)S.dH=[];const ex=S.dH.findIndex(x=>x.date===d);if(ex>=0)S.dH[ex]=e;else S.dH.push(e);save();alert('저장 💚');ren();}
 
 // === GUIDE ===
-function rGuide(){let h='<div class="fd">';GS.forEach(s=>{h+=`<div class="section-title">${s.title}</div>`;s.items.forEach(i=>{h+=`<div class="guide-block"><h4>${i.subtitle}</h4><ul>${i.tips.map(t=>'<li>'+t+'</li>').join('')}</ul></div>`;});});h+=`<div class="section-title">💡 Q&A</div><div class="c">`;QNA.forEach(q=>{h+=`<div class="qa-item"><div class="qa-q">${q.q}</div><div class="qa-a">${q.a}</div></div>`;});h+=`</div><div class="section-title">⚠️ 주의 식품</div><div class="c">`;AVOID.forEach(a=>{h+=`<div class="ai"><div style="font-size:18px">${a.icon}</div><div><div style="font-size:11px;font-weight:700;color:#C0392B">${a.food}</div><div style="font-size:9px;color:#8B6914">${a.reason}</div></div></div>`;});h+=`</div><div class="section-title">✅ 권장 식품</div><div class="c">`;GOOD.forEach(g=>{h+=`<div class="gi"><div style="font-size:16px">${g.icon}</div><div><div style="font-size:11px;font-weight:600;color:#2D6A2E">${g.food}</div><div style="font-size:9px;color:var(--g)">${g.reason}</div></div></div>`;});h+=`</div></div>`;return h;}
+function rGuide(){let h='<div class="fd">';GS.forEach(s=>{h+=`<div class="section-title">${s.title}</div>`;s.items.forEach(i=>{h+=`<div class="guide-block"><h4>${i.subtitle}</h4><ul>${i.tips.map(t=>'<li>'+t+'</li>').join('')}</ul></div>`;});});h+=`<div class="section-title">💡 Q&A</div><div class="c">`;QNA.forEach(q=>{h+=`<div class="qa-item"><div class="qa-q">${q.q}</div><div class="qa-a">${q.a}</div></div>`;});h+=`</div><div class="section-title">⚠️ 주의 식품</div><div class="c">`;AVOID.forEach(a=>{h+=`<div class="ai"><div style="font-size:22px">${a.icon}</div><div><div style="font-size:14px;font-weight:700;color:#C0392B">${a.food}</div><div style="font-size:12px;color:#8B6914">${a.reason}</div></div></div>`;});h+=`</div><div class="section-title">✅ 권장 식품</div><div class="c">`;GOOD.forEach(g=>{h+=`<div class="gi"><div style="font-size:19px">${g.icon}</div><div><div style="font-size:14px;font-weight:600;color:#2D6A2E">${g.food}</div><div style="font-size:12px;color:var(--g)">${g.reason}</div></div></div>`;});h+=`</div></div>`;return h;}
 
 ren();
 </script></body></html>
