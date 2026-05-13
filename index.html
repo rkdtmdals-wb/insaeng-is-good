@@ -194,24 +194,30 @@ let cells=dN.map((d,i)=>`<div class="cal-hd" style="${i===0?'color:var(--coral)'
 for(let i=0;i<fd;i++)cells+=`<div class="cal-day empty"></div>`;
 for(let d=1;d<=dim;d++){
 const ds=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-const hasData=S.vitals&&S.vitals[ds]||S.dH&&S.dH.find(x=>x.date===ds);
+const hasData=S.vitals&&S.vitals[ds]||S.dH&&S.dH.find(x=>x.date===ds)||(S.mealHistory||[]).find(m=>m.date===ds);
 const dow=new Date(y,m,d).getDay();
 let cls='cal-day';
 if(ds===today)cls+=' today';if(ds===S.selDate&&ds!==today)cls+=' sel';if(hasData)cls+=' has-data';if(dow===0)cls+=' sun';if(dow===6)cls+=' sat';
 cells+=`<div class="${cls}" onclick="selDay('${ds}')">${d}</div>`;}
 
 const sd=S.selDate,v=(S.vitals&&S.vitals[sd])||{},diary=S.dH?S.dH.find(x=>x.date===sd):null;
+const dayMeals=(S.mealHistory||[]).filter(m=>m.date===sd);
+const todayStr=new Date().toISOString().split('T')[0];
+if(sd===todayStr&&S.meals&&S.meals.length){dayMeals.push(...S.meals.map(m=>({...m,date:todayStr})));}
 let chemoHtml='';
 if(S.chemoInfo&&S.chemoInfo.cycle&&S.chemoInfo.startDate){const diff=Math.floor((new Date(sd)-new Date(S.chemoInfo.startDate))/864e5)+1;if(diff>0)chemoHtml=`<div class="chemo-badge">💉 ${S.chemoInfo.cycle}차 항암 ${diff}일째</div>`;}
 else if(S.chemoInfo&&S.chemoInfo.cycle)chemoHtml=`<div class="chemo-badge">💉 ${S.chemoInfo.cycle}차 항암</div>`;
 
 let det=`<div class="c"><h3>📋 ${sd}</h3>${chemoHtml}`;
 if(v.bp||v.temp||v.weight){det+=`<div class="record-card">`;if(v.bp)det+=`<div style="font-size:15px;margin-bottom:3px">🩸 혈압: <b>${v.bp}</b></div>`;if(v.temp)det+=`<div style="font-size:15px;margin-bottom:3px">🌡️ 체온: <b>${v.temp}°C</b></div>`;if(v.weight)det+=`<div style="font-size:15px">⚖️ 체중: <b>${v.weight}kg</b></div>`;det+=`<div style="display:flex;gap:4px;margin-top:6px"><button class="edit-btn" onclick="editV('${sd}')">✏️수정</button><button class="del-btn" onclick="delV('${sd}')">🗑️삭제</button></div></div>`;}else det+=`<p style="font-size:14px;color:var(--txl)">바이탈 기록 없음</p>`;
+
+if(dayMeals.length){det+=`<div class="record-card" style="margin-top:6px"><div style="font-size:14px;font-weight:600;margin-bottom:4px">🍽️ 식사 기록</div>`;dayMeals.forEach(m=>{det+=`<div style="display:flex;justify-content:space-between;padding:3px 0;font-size:14px"><span>${m.name} <span style="color:var(--txl);font-size:13px">${m.time||''}</span></span><span style="color:var(--g);font-weight:600">${m.cal}kcal</span></div>`;});const dtc=dayMeals.reduce((s,m)=>s+m.cal,0),dtp=dayMeals.reduce((s,m)=>s+m.pro,0);det+=`<div style="margin-top:4px;padding-top:4px;border-top:1px solid #eee;font-size:13px;color:var(--g);font-weight:600">합계: ${dtc}kcal · 단백질 ${dtp}g</div></div>`;}
+
 if(diary){det+=`<div class="record-card" style="margin-top:6px"><div style="font-size:14px;font-weight:600;margin-bottom:3px">📝 일기</div>`;if(diary.symptoms&&diary.symptoms.length)det+=`<div style="margin-bottom:3px">${diary.symptoms.map(s=>'<span class="badge" style="background:#FFF0F0;color:var(--coral)">'+s+'</span>').join('')}</div>`;det+=`<p style="font-size:14px;line-height:1.6">${diary.text||'(없음)'}</p><div style="display:flex;gap:4px;margin-top:6px"><button class="edit-btn" onclick="editD2('${sd}')">✏️수정</button><button class="del-btn" onclick="delD2('${sd}')">🗑️삭제</button></div></div>`;}
 det+=`</div>`;
 
 let inp=`<div class="c"><h3>✏️ 기록 입력</h3><div style="margin-bottom:8px"><div style="font-size:14px;font-weight:600;margin-bottom:4px">💉 항암 차수</div><div class="vital-row"><label>차수</label><input type="text" placeholder="예:4" value="${(S.chemoInfo&&S.chemoInfo.cycle)||''}" oninput="S.chemoInfo.cycle=this.value;save()"></div><div class="vital-row"><label>시작일</label><input type="date" value="${(S.chemoInfo&&S.chemoInfo.startDate)||''}" oninput="S.chemoInfo.startDate=this.value;save()"></div></div><div style="font-size:14px;font-weight:600;margin-bottom:4px">🩺 바이탈</div><div class="vital-row"><label>🩸혈압</label><input type="text" id="vBp" placeholder="120/80" value="${v.bp||''}"></div><div class="vital-row"><label>🌡️체온</label><input type="number" id="vTp" placeholder="36.5" step="0.1" value="${v.temp||''}"></div><div class="vital-row"><label>⚖️체중</label><input type="number" id="vWt" placeholder="kg" step="0.1" value="${v.weight||''}"></div><button class="btn bp" style="margin-top:5px" onclick="saveV('${sd}')">💾 저장</button></div>`;
-return`<div class="fd"><div class="c"><div class="cal-nav"><button onclick="pM()">◀</button><span>${y}년 ${mN[m]}</span><button onclick="nM()">▶</button></div><div class="cal-grid">${cells}</div></div>${det}${inp}</div>`;}
+return`<div class="fd"><div class="c"><div class="cal-nav"><button onclick="pM()">◀</button><span>${y}년 ${mN[m]}</span><button onclick="nM()">▶</button></div><div class="cal-grid">${cells}</div></div>${det}${inp}<button class="btn" style="background:#2D3A2D;color:#fff;margin-top:8px;font-size:15px" onclick="printReport()">🖨️ 진료용 기록 리포트 인쇄</button></div>`;}
 function selDay(d){S.selDate=d;ren();}
 function pM(){S.calMonth--;if(S.calMonth<0){S.calMonth=11;S.calYear--;}ren();}
 function nM(){S.calMonth++;if(S.calMonth>11){S.calMonth=0;S.calYear++;}ren();}
@@ -245,6 +251,36 @@ function sD(){const t=document.getElementById('dI')?.value||'';S.diary=t;const d
 
 // === GUIDE ===
 function rGuide(){let h='<div class="fd">';GS.forEach(s=>{h+=`<div class="section-title">${s.title}</div>`;s.items.forEach(i=>{h+=`<div class="guide-block"><h4>${i.subtitle}</h4><ul>${i.tips.map(t=>'<li>'+t+'</li>').join('')}</ul></div>`;});});h+=`<div class="section-title">💡 Q&A</div><div class="c">`;QNA.forEach(q=>{h+=`<div class="qa-item"><div class="qa-q">${q.q}</div><div class="qa-a">${q.a}</div></div>`;});h+=`</div><div class="section-title">⚠️ 주의 식품</div><div class="c">`;AVOID.forEach(a=>{h+=`<div class="ai"><div style="font-size:22px">${a.icon}</div><div><div style="font-size:14px;font-weight:700;color:#C0392B">${a.food}</div><div style="font-size:12px;color:#8B6914">${a.reason}</div></div></div>`;});h+=`</div><div class="section-title">✅ 권장 식품</div><div class="c">`;GOOD.forEach(g=>{h+=`<div class="gi"><div style="font-size:19px">${g.icon}</div><div><div style="font-size:14px;font-weight:600;color:#2D6A2E">${g.food}</div><div style="font-size:12px;color:var(--g)">${g.reason}</div></div></div>`;});h+=`</div></div>`;return h;}
+
+// === PRINT REPORT ===
+function printReport(){
+const allDates=new Set();
+if(S.vitals)Object.keys(S.vitals).forEach(d=>allDates.add(d));
+if(S.dH)S.dH.forEach(d=>allDates.add(d.date));
+if(S.mealHistory)S.mealHistory.forEach(m=>allDates.add(m.date));
+const today=new Date().toISOString().split('T')[0];
+if(S.meals&&S.meals.length)allDates.add(today);
+const sorted=[...allDates].sort();
+if(!sorted.length){alert('기록된 데이터가 없습니다.');return;}
+let html=`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>진료용 기록 리포트</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,sans-serif;padding:20px;color:#222;font-size:13px;line-height:1.6}h1{font-size:20px;text-align:center;margin-bottom:4px;color:#2D3A2D}.sub2{text-align:center;font-size:12px;color:#888;margin-bottom:16px}.ci{text-align:center;background:#E8F0E8;padding:8px;border-radius:8px;margin-bottom:16px;font-weight:600;font-size:14px}table{width:100%;border-collapse:collapse;margin-bottom:20px;page-break-inside:auto}th{background:#5B8C5A;color:#fff;padding:8px 6px;font-size:12px;text-align:left;border:1px solid #4a7a4a}td{padding:6px;border:1px solid #ddd;font-size:12px;vertical-align:top}tr{page-break-inside:avoid}tr:nth-child(even){background:#f8faf8}.sec{font-size:15px;font-weight:700;color:#2D3A2D;margin:16px 0 8px;padding-bottom:4px;border-bottom:2px solid #5B8C5A}.bdg{display:inline-block;background:#FFF0F0;color:#FF6B6B;padding:1px 6px;border-radius:4px;font-size:10px;margin:1px}.ft{text-align:center;font-size:10px;color:#aaa;margin-top:20px;border-top:1px solid #ddd;padding-top:8px}@media print{body{padding:10px}.no-print{display:none!important}}</style></head><body>`;
+html+=`<h1>🌿 인생 이즈 굿 - 진료용 기록 리포트</h1><div class="sub2">출력일: ${today}</div>`;
+if(S.chemoInfo&&S.chemoInfo.cycle){html+=`<div class="ci">💉 ${S.chemoInfo.cycle}차 항암`+(S.chemoInfo.startDate?' · 시작일: '+S.chemoInfo.startDate:'')+'</div>';}
+html+=`<div class="sec">🩺 바이탈 사인</div><table><tr><th>날짜</th><th>혈압</th><th>체온°C</th><th>체중kg</th>`;
+if(S.chemoInfo&&S.chemoInfo.startDate)html+=`<th>항암일차</th>`;
+html+=`</tr>`;
+sorted.forEach(d=>{const v=(S.vitals&&S.vitals[d])||{};if(!v.bp&&!v.temp&&!v.weight)return;let dn='';if(S.chemoInfo&&S.chemoInfo.startDate){const diff=Math.floor((new Date(d)-new Date(S.chemoInfo.startDate))/864e5)+1;if(diff>0)dn=diff+'일째';}html+=`<tr><td><b>${d}</b></td><td>${v.bp||'-'}</td><td>${v.temp||'-'}</td><td>${v.weight||'-'}</td>`;if(S.chemoInfo&&S.chemoInfo.startDate)html+=`<td>${dn}</td>`;html+=`</tr>`;});
+html+=`</table>`;
+html+=`<div class="sec">🍽️ 식사 기록</div><table><tr><th>날짜</th><th>음식</th><th>칼로리</th><th>단백질</th></tr>`;
+sorted.forEach(d=>{let dm=(S.mealHistory||[]).filter(m=>m.date===d);if(d===today&&S.meals&&S.meals.length)dm=[...dm,...S.meals];if(!dm.length)return;dm.forEach((m,i)=>{html+=`<tr><td>${i===0?'<b>'+d+'</b>':''}</td><td>${m.name}</td><td>${m.cal}kcal</td><td>${m.pro}g</td></tr>`;});const tc=dm.reduce((s,m)=>s+m.cal,0),tp=dm.reduce((s,m)=>s+m.pro,0);html+=`<tr style="background:#E8F0E8;font-weight:600"><td></td><td>합계</td><td>${tc}kcal</td><td>${tp}g</td></tr>`;});
+html+=`</table>`;
+html+=`<div class="sec">📝 건강 일기 · 증상</div><table><tr><th>날짜</th><th>증상</th><th>일기 내용</th></tr>`;
+(S.dH||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)).forEach(d=>{const sy=(d.symptoms&&d.symptoms.length)?d.symptoms.map(s=>'<span class="bdg">'+s+'</span>').join(' '):'없음';html+=`<tr><td><b>${d.date}</b></td><td>${sy}</td><td>${d.text||'-'}</td></tr>`;});
+html+=`</table>`;
+html+=`<div class="ft">인생 이즈 굿 (In-saeng is Good) · 항암 영양케어 프로그램</div>`;
+html+=`<div class="no-print" style="text-align:center;margin-top:12px"><button onclick="window.print()" style="padding:10px 30px;font-size:15px;background:#5B8C5A;color:#fff;border:none;border-radius:8px;cursor:pointer">🖨️ 인쇄하기</button></div>`;
+html+=`</body></html>`;
+const w=window.open('','_blank');if(w){w.document.write(html);w.document.close();}else{alert('팝업이 차단되었습니다. 팝업 허용 후 다시 시도해주세요.');}
+}
 
 ren();
 </script></body></html>
